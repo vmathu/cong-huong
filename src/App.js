@@ -9,7 +9,7 @@ import OurStory from "./pages/our-story/ourStory";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename='/cong-huong'>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
         </Routes>
