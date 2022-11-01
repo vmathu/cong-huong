@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import heroBanner from "../../images/hero-banner.png";
 import dividerBanner from "../../images/divider-banner.png";
 import dividerBanner2 from "../../images/divider-banner2.jpg";
+import endingBanner from "../../images/ending-banner.png";
 
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         padding: 0,
         margin: 0,
         width: "100%",
-        fontFamily: "Poppins",
+        fontFamily: "Livvic",
         color: "#454016"
     },
     banner: {
@@ -23,26 +24,26 @@ const useStyles = makeStyles((theme) => ({
         background: "#F8EAEA"
     },
     header: {
-        fontFamily: 'Cormorant Garamond',
+        fontFamily: 'Alice',
         fontWeight: 500,
-        fontSize: "100px",
+        fontSize: "90px",
         lineHeight: "100%",
         textAlign: "center",
-        padding: "14vw",
+        padding: "10vw 17vw",
         paddingBottom: 0,
-        margin: '0 8vw 0 8vw',
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down("xs")]: {
             fontSize: "30px",
-            padding: "36vw 8vw 4vw 8vw",
+            padding: "32vw 8vw 4vw 8vw",
         },
     },
     subTitle: {
-        fontFamily: 'Poppins',
+        fontFamily: 'Livvic',
         fontWeight: 400,
         fontSize: '20px',
-        padding: "0 24vw",
+        lineHeight: "150%",
+        padding: "0 30vw",
         marginBottom: 0,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down("xs")]: {
             fontSize: "16px",
             padding: "0 8vw"
         },
@@ -50,28 +51,37 @@ const useStyles = makeStyles((theme) => ({
     section: {
         width: "auto",
         padding: "8vw",
-        justifyContent: "space-between"
+        justifyContent: "space-between", 
+        [theme.breakpoints.down("sm")]: {
+            justifyContent: "left"
+        },
     },
     sectionHeader: {
-        fontFamily: 'Cormorant Garamond',
+        fontFamily: 'Alice',
         fontWeight: 500,
         fontSize: "50px",
         lineHeight: "120%",
         textAlign: "left",
         marginTop: 0,
         [theme.breakpoints.down("sm")]: {
-            fontSize: "28px",
+            textAlign: "center",
+        }, 
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "28px"
         },
     },
     sectionSubHeader: {
         fontSize: "24px",
         fontWeight: "500",
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "left",
+        },
     },
     sectionDescription: {
         textAlign: "left",
         fontSize: "20px",
         width: '100%',
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down("xs")]: {
             fontSize: "16px",
         },
     },
@@ -85,6 +95,22 @@ const useStyles = makeStyles((theme) => ({
             color: "#F8EAEA"
         }
     },
+    button2: {
+        background: "#EFA7A7",
+        color: "#F8EAEA",
+        padding: '15px 30px',
+        fontSize: '16px',
+        "&:hover": {
+            background: "white",
+            color: "#EFA7A7",
+        }
+    },
+    gridResponsive: {
+        textAlign: "left", 
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "center"
+        },
+    }
 }))
 
 export default function HomePage() {
@@ -106,7 +132,7 @@ export default function HomePage() {
                 <Grid item sm={12} md={4}>
                     <h1 className={classes.sectionHeader}>The Whole Family Approach helps you understand your whole self.</h1>
                 </Grid>
-                <Grid item sm={12} md={7} className={classes.sectionDescription}>
+                <Grid item sm={12} md={7} className={[classes.sectionDescription, classes.gridResponsive]}>
                     <div>
                         The Whole Family Approach doesn’t ask you to fit between the lines on a form. Instead it creates a space where you can stretch out in your potential as you heal, move past trauma, and break the cycle of struggle.
                         <br /> <br />
@@ -122,11 +148,11 @@ export default function HomePage() {
                 <img src={dividerBanner} alt="divider banner" className={classes.banner}></img>
                 <div className={classes.section}>
                     <Grid item style={{ width: "100%" }}>
-                        <h1 className={classes.sectionHeader} style={{ textAlign: "center", margin: "0 20vw 4vw 20vw" }}>How the Whole Family Approach works</h1>
+                        <h1 className={classes.sectionHeader} style={{ textAlign: "center"}}>How the Whole Family Approach works</h1>
                     </Grid>
                     <Grid>
                         <Grid container style={{ justifyContent: "space-between" }}>
-                            <Grid item sm={12} md={4} className={classes.sectionDescription}>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
                                 <div className={classes.sectionSubHeader}>Centers on both you AND your family.</div>
                                 <br />
                                 <div style={{ fontSize: "14px" }}>
@@ -136,7 +162,7 @@ export default function HomePage() {
                                 </div>
                                 <br />
                             </Grid>
-                            <Grid item sm={12} md={4} className={classes.sectionDescription}>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
                                 <div className={classes.sectionSubHeader}>Guides you toward the future you want with practical tools.</div>
                                 <br />
                                 <div style={{ fontSize: "14px" }}>
@@ -146,7 +172,7 @@ export default function HomePage() {
                                 </div>
                                 <br />
                             </Grid>
-                            <Grid item sm={12} md={4} className={classes.sectionDescription}>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
                                 <div className={classes.sectionSubHeader}>Sets you up for the marathon.</div>
                                 <br />
                                 <div style={{ fontSize: "14px" }}>
@@ -173,9 +199,9 @@ export default function HomePage() {
                     <br />
                 </Grid>
             </Grid>
-            <img src={dividerBanner2} alt="divider banner 2"></img>
+            <img src={dividerBanner2} alt="divider banner 2" style={{ width: "100%" }}></img>
             <Grid container className={classes.section}>
-                <Grid item sm={12} md={2} className={classes.sectionDescription}>
+                <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
                     <div className={classes.sectionSubHeader}>Your Story</div>
                     <br />
                     <div style={{ fontSize: "14px" }}>
@@ -185,7 +211,7 @@ export default function HomePage() {
                     </div>
                     <br />
                 </Grid>
-                <Grid item sm={12} md={2} className={classes.sectionDescription}>
+                <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
                     <div className={classes.sectionSubHeader}>Your People</div>
                     <br />
                     <div style={{ fontSize: "14px" }}>
@@ -195,7 +221,7 @@ export default function HomePage() {
                     </div>
                     <br />
                 </Grid>
-                <Grid item sm={12} md={2} className={classes.sectionDescription}>
+                <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
                     <div className={classes.sectionSubHeader}>Your Hopes</div>
                     <br />
                     <div style={{ fontSize: "14px" }}>
@@ -205,7 +231,7 @@ export default function HomePage() {
                     </div>
                     <br />
                 </Grid>
-                <Grid item sm={12} md={2} className={classes.sectionDescription}>
+                <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
                     <div className={classes.sectionSubHeader}>
                         Your Path
                     </div>
@@ -217,7 +243,7 @@ export default function HomePage() {
                     </div>
                     <br />
                 </Grid>
-                <Grid item sm={12} md={2} className={classes.sectionDescription}>
+                <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
                     <div className={classes.sectionSubHeader}>Your Joys</div>
                     <br />
                     <div style={{ fontSize: "14px" }}>
@@ -228,7 +254,18 @@ export default function HomePage() {
                     <br />
                 </Grid>
             </Grid>
-            <Footer />
+            <Grid container className={[classes.section, classes.banner]} style={{ alignItems: "center" }}>
+                <Grid item sm={12} md={7} className={classes.banner}>
+                    <img src={endingBanner} alt="ending banner" style={{ width: "100%" }}></img>
+                </Grid>
+                <Grid item sm={12} md={4} className={classes.gridResponsive}>
+                    <h1 className={classes.sectionHeader}>Get started on your journey.</h1>
+                    <Button variant="constained" href="/toolkit" className={classes.button2}>
+                        THE TOOLKIT
+                    </Button>
+                </Grid>
+            </Grid>
+            <Footer current="Home" />
         </div>
     );
 }

@@ -3,9 +3,6 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
 import clsx from 'clsx';
 
-//logo
-import congHuongLogo from "../images/cong-huong-logo.svg";
-
 //core
 import { Hidden, IconButton } from "@material-ui/core";
 import Drawer from '@material-ui/core/Drawer';
@@ -22,6 +19,7 @@ const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
     root: {
+        fontFamily: "Livvic", 
         position: 'fixed',
         padding: 0,
         margin: 0,
@@ -32,7 +30,7 @@ const useStyles = makeStyles(theme => ({
             color: '#EFA7A7'
         },
         "& .MuiTypography-body1": {
-            fontFamily: 'Poppins',
+            fontFamily: 'Livvic',
             color: 'white'
         },
     },
@@ -44,11 +42,15 @@ const useStyles = makeStyles(theme => ({
         justifyContent: "space-between",
         alignItems: "center"
     },
+    logo: {
+        fontWeight: 600, 
+        fontSize: "20px", 
+        padding: "1em"
+    }, 
     listItems: {
         display: "flex"
     },
     items: {
-        fontFamily: "Poppins",
         display: "block",
         color: "#EFA7A7",
         textDecoration: "none",
@@ -60,7 +62,6 @@ const useStyles = makeStyles(theme => ({
         }
     },
     itemsCurrent: {
-        fontFamily: "Poppins",
         display: "block",
         textDecoration: "none",
         padding: "1em",
@@ -78,7 +79,6 @@ const useStyles = makeStyles(theme => ({
     drawerPaper: {
         width: drawerWidth,
         background: "#F8EAEA",
-        fontFamily: 'Poppins'
     },
     drawerHeader: {
         display: 'flex',
@@ -126,8 +126,8 @@ export default function NavBar(props) {
     return (
         <div className={classes.root}>
             <div className={classes.navBarContainer}>
-                <div className={classes.congHuongLogo}>
-                    <Link to="/" style={{display: "flex"}}><img src={congHuongLogo} alt="cong huong logo" /></Link>
+                <div className={classes.logo}>
+                    <Link to="/" style={{display: "flex", textDecoration: "none", color: "#00AFE7"}}>Cộng hưởng<span style={{color: "#EFA7A7"}}>.</span></Link>
                 </div>
                 <Hidden only={['xs', 'sm']}>
                     <div className={classes.listItems}>
