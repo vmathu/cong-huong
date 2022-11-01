@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.491e96c8.css",
-    "main.js": "/cong-huong/static/js/main.cefdac54.js",
+    "main.js": "/cong-huong/static/js/main.ecfb856f.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
     "static/media/hero-banner.png": "/cong-huong/static/media/hero-banner.407f8a08f2181d146304.png",
     "static/media/divider-banner.png": "/cong-huong/static/media/divider-banner.45903a6aca52b8a5240c.png",
@@ -9,11 +9,11 @@
     "static/media/ending-banner.png": "/cong-huong/static/media/ending-banner.b106a7f88cafc382db2f.png",
     "index.html": "/cong-huong/index.html",
     "main.491e96c8.css.map": "/cong-huong/static/css/main.491e96c8.css.map",
-    "main.cefdac54.js.map": "/cong-huong/static/js/main.cefdac54.js.map",
+    "main.ecfb856f.js.map": "/cong-huong/static/js/main.ecfb856f.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.491e96c8.css",
-    "static/js/main.cefdac54.js"
+    "static/js/main.ecfb856f.js"
   ]
 }
