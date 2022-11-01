@@ -127,7 +127,7 @@ export default function NavBar(props) {
         <div className={classes.root}>
             <div className={classes.navBarContainer}>
                 <div className={classes.congHuongLogo}>
-                    <Link to="/"><img src={congHuongLogo} alt="cong huong logo" /></Link>
+                    <Link to="/" style={{display: "flex"}}><img src={congHuongLogo} alt="cong huong logo" /></Link>
                 </div>
                 <Hidden only={['xs', 'sm']}>
                     <div className={classes.listItems}>
@@ -152,7 +152,7 @@ export default function NavBar(props) {
                         edge='end'
                         onClick={handleDrawerOpen}
                         className={clsx(open && classes.hide)}
-                        style={{ padding: 0 }}
+                        style={{ padding: "1em" }}
                     >
                         <MenuIcon />
                     </IconButton>
