@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/cong-huong/static/css/main.5ecf0d0a.css",
+    "main.js": "/cong-huong/static/js/main.2cad8da2.js",
+    "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
+    "static/media/hero-banner.png": "/cong-huong/static/media/hero-banner.407f8a08f2181d146304.png",
+    "static/media/divider-banner.png": "/cong-huong/static/media/divider-banner.45903a6aca52b8a5240c.png",
+    "static/media/divider-banner2.jpg": "/cong-huong/static/media/divider-banner2.c390791710f0956e8be5.jpg",
+    "static/media/cong-huong-logo.svg": "/cong-huong/static/media/cong-huong-logo.381afa760ba9f82bf40e79ca68f2380c.svg",
+    "index.html": "/cong-huong/index.html",
+    "main.5ecf0d0a.css.map": "/cong-huong/static/css/main.5ecf0d0a.css.map",
+    "main.2cad8da2.js.map": "/cong-huong/static/js/main.2cad8da2.js.map",
+    "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ecf0d0a.css",
+    "static/js/main.2cad8da2.js"
+  ]
+}
