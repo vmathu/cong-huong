@@ -124,22 +124,22 @@ export default function HomePage() {
                     You are bigger than this moment.
                 </h1>
                 <h2 className={classes.subTitle}>
-                    The Whole Family Approach is both a philosophy and a kit of tools that guides you in exploring your experiences from broader perspective in order to move beyond them.
+                    Cộng hưởng is both a philosophy and a kit of tools that guides you in exploring your experiences from broader perspective in order to move beyond them.
                 </h2>
             </div>
             <img src={heroBanner} alt="hero banner" className={classes.banner}></img>
             <Grid container className={classes.section}>
                 <Grid item sm={12} md={4}>
-                    <h1 className={classes.sectionHeader}>The Whole Family Approach helps you understand your whole self.</h1>
+                    <h1 className={classes.sectionHeader}>Cộng hưởng helps you understand your whole self.</h1>
                 </Grid>
                 <Grid item sm={12} md={7} className={[classes.sectionDescription, classes.gridResponsive]}>
                     <div>
-                        The Whole Family Approach doesn’t ask you to fit between the lines on a form. Instead it creates a space where you can stretch out in your potential as you heal, move past trauma, and break the cycle of struggle.
+                        Cộng hưởng doesn’t ask you to fit between the lines on a form. Instead it creates a space where you can stretch out in your potential as you heal, move past trauma, and break the cycle of struggle.
                         <br /> <br />
                         Seeing yourself and your experiences with fresh eyes requires courage and curiosity, but it’s the key to unlocking what’s next for you and your family.
                     </div>
                     <br />
-                    <Button variant="constained" href="/toolkit" className={classes.button}>
+                    <Button variant="constained" href="/cong-huong/toolkit" className={classes.button}>
                         THE TOOLKIT
                     </Button>
                 </Grid>
@@ -148,7 +148,7 @@ export default function HomePage() {
                 <img src={dividerBanner} alt="divider banner" className={classes.banner}></img>
                 <div className={classes.section}>
                     <Grid item style={{ width: "100%" }}>
-                        <h1 className={classes.sectionHeader} style={{ textAlign: "center"}}>How the Whole Family Approach works</h1>
+                        <h1 className={classes.sectionHeader} style={{ textAlign: "center"}}>How Cộng hưởng works</h1>
                     </Grid>
                     <Grid>
                         <Grid container style={{ justifyContent: "space-between" }}>
@@ -176,7 +176,7 @@ export default function HomePage() {
                                 <div className={classes.sectionSubHeader}>Sets you up for the marathon.</div>
                                 <br />
                                 <div style={{ fontSize: "14px" }}>
-                                    Using the approach, won’t be easy and at times, it won’t feel great. Healing can be a slow and uncomfortable process. Unraveling generations of struggle takes time. But the changes and liberation you’re seeking is possible and the Whole Family Approach will help you get there.
+                                    Using the approach, won’t be easy and at times, it won’t feel great. Healing can be a slow and uncomfortable process. Unraveling generations of struggle takes time. But the changes and liberation you’re seeking is possible and Cộng hưởng will help you get there.
                                 </div>
                                 <br />
                             </Grid>
@@ -186,7 +186,7 @@ export default function HomePage() {
             </Grid>
             <Grid container className={classes.section}>
                 <Grid item sm={12} md={4}>
-                    <h1 className={classes.sectionHeader}>The Whole Family Approach encourages you to explore all of the dimensions that make you, you.</h1>
+                    <h1 className={classes.sectionHeader}>Cộng hưởng encourages you to explore all of the dimensions that make you, you.</h1>
                 </Grid>
                 <Grid item sm={12} md={7} className={classes.sectionDescription}>
                     <div>
@@ -260,12 +260,12 @@ export default function HomePage() {
                 </Grid>
                 <Grid item sm={12} md={4} className={classes.gridResponsive}>
                     <h1 className={classes.sectionHeader}>Get started on your journey.</h1>
-                    <Button variant="constained" href="/toolkit" className={classes.button2}>
+                    <Button variant="constained" href="/cong-huong/toolkit" className={classes.button2}>
                         THE TOOLKIT
                     </Button>
                 </Grid>
             </Grid>
-            <Footer current="Home" />
+            <Footer/>
         </div>
     );
 }
