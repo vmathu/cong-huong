@@ -1,7 +1,8 @@
 import { makeStyles } from "@material-ui/core/styles";
-
 import Grid from "@material-ui/core/Grid";
 import Button from '@material-ui/core/Button';
+
+import { Link } from "react-router-dom";
 
 import heroBanner from "../../images/hero-banner.png";
 import dividerBanner from "../../images/divider-banner.png";
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     section: {
         width: "auto",
         padding: "8vw",
-        justifyContent: "space-between", 
+        justifyContent: "space-between",
         [theme.breakpoints.down("sm")]: {
             justifyContent: "left"
         },
@@ -65,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 0,
         [theme.breakpoints.down("sm")]: {
             textAlign: "center",
-        }, 
+        },
         [theme.breakpoints.down("xs")]: {
             fontSize: "28px"
         },
@@ -106,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     gridResponsive: {
-        textAlign: "left", 
+        textAlign: "left",
         [theme.breakpoints.down("sm")]: {
             textAlign: "center"
         },
@@ -139,16 +140,18 @@ export default function HomePage() {
                         Seeing yourself and your experiences with fresh eyes requires courage and curiosity, but it’s the key to unlocking what’s next for you and your family.
                     </div>
                     <br />
-                    <Button variant="constained" href="/cong-huong/toolkit" className={classes.button}>
-                        THE TOOLKIT
-                    </Button>
+                    <Link to="/toolkit" style={{textDecoration: "none"}}>
+                        <Button variant="constained" className={classes.button}>
+                            THE TOOLKIT
+                        </Button>
+                    </Link>
                 </Grid>
             </Grid>
             <Grid container style={{ background: "#F8EAEA", }}>
                 <img src={dividerBanner} alt="divider banner" className={classes.banner}></img>
                 <div className={classes.section}>
                     <Grid item style={{ width: "100%" }}>
-                        <h1 className={classes.sectionHeader} style={{ textAlign: "center"}}>How Cộng hưởng works</h1>
+                        <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>How Cộng hưởng works</h1>
                     </Grid>
                     <Grid>
                         <Grid container style={{ justifyContent: "space-between" }}>
@@ -260,12 +263,14 @@ export default function HomePage() {
                 </Grid>
                 <Grid item sm={12} md={4} className={classes.gridResponsive}>
                     <h1 className={classes.sectionHeader}>Get started on your journey.</h1>
-                    <Button variant="constained" href="/cong-huong/toolkit" className={classes.button2}>
-                        THE TOOLKIT
-                    </Button>
+                    <Link to="/toolkit" style={{textDecoration: "none"}}>
+                        <Button variant="constained" className={classes.button2}>
+                            THE TOOLKIT
+                        </Button>
+                    </Link>
                 </Grid>
             </Grid>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
