@@ -8,6 +8,8 @@ import toolkitBanner from "../../images/toolkit-banner.png";
 import dividerBanner from "../../images/toolkit-divider-banner.png";
 import shape from "../../images/shape.png";
 
+import file from "../../files/Slide mô tả dự án.pdf";
+
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: 0,
@@ -19,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
         background: "#F8EAEA",
     },
     heroBanner: {
-        marginTop: "-8vw", 
+        marginTop: "-8vw",
         [theme.breakpoints.down("sm")]: {
             marginTop: 0
         },
         [theme.breakpoints.down("xs")]: {
             marginTop: "8vw"
         },
-    }, 
+    },
     banner: {
         width: "100%",
         textAlign: "left"
@@ -44,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: "100%",
         margin: "20vw 17vw 0",
         [theme.breakpoints.down("sm")]: {
-            textAlign: "center", 
+            textAlign: "center",
         },
         [theme.breakpoints.down("xs")]: {
             fontSize: "30px",
@@ -60,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         margin: "2vw 0 0 0",
         textAlign: "left",
         [theme.breakpoints.down("sm")]: {
-            textAlign: "center", 
+            textAlign: "center",
             padding: '0 17vw'
         },
         [theme.breakpoints.down("xs")]: {
@@ -191,10 +193,9 @@ export default function Toolkit() {
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
                         The Tools
                     </h1>
-                    <h2 className={classes.subTitle} style={{ textAlign: "center", padding: "0 22vw", marginBottom: "2vw" }}>
-                        There’s no wrong way to dig in and start Cộng hưởng, but with more than 15 tools, you might not know where to begin.
-                    </h2>
                 </div>
+                <iframe src={file} width="100%" height="710vw">
+                </iframe>
             </Grid>
             <Footer />
         </div>
