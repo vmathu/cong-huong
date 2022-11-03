@@ -18,6 +18,15 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "left",
         background: "#F8EAEA",
     },
+    heroBanner: {
+        marginTop: "-8vw", 
+        [theme.breakpoints.down("sm")]: {
+            marginTop: 0
+        },
+        [theme.breakpoints.down("xs")]: {
+            marginTop: "8vw"
+        },
+    }, 
     banner: {
         width: "100%",
         textAlign: "left"
@@ -34,9 +43,12 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "left",
         lineHeight: "100%",
         margin: "20vw 17vw 0",
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "center", 
+        },
         [theme.breakpoints.down("xs")]: {
             fontSize: "30px",
-            padding: "32vw 8vw 4vw 8vw",
+            padding: "16vw 8vw 4vw 8vw",
         },
     },
     subTitle: {
@@ -47,6 +59,10 @@ const useStyles = makeStyles((theme) => ({
         padding: "0 60vw 0 17vw",
         margin: "2vw 0 0 0",
         textAlign: "left",
+        [theme.breakpoints.down("sm")]: {
+            textAlign: "center", 
+            padding: '0 17vw'
+        },
         [theme.breakpoints.down("xs")]: {
             fontSize: "16px",
             padding: "0 8vw"
@@ -110,17 +126,17 @@ export default function Toolkit() {
                     The Tools
                 </h1>
                 <h2 className={classes.subTitle}>
-                    The way to get started with the Whole Family Approach
+                    The way to get started with Cộng hưởng
                 </h2>
             </div>
-            <img src={toolkitBanner} alt="toolkit banner" className={classes.banner} style={{ marginTop: "-8vw" }}></img>
+            <img src={toolkitBanner} alt="toolkit banner" className={[classes.banner + " " + classes.heroBanner]} ></img>
             <Grid container className={classes.section} style={{ paddingBottom: 0 }}>
                 <Grid item sm={12} md={5}>
                     <h1 className={classes.sectionHeader}>This toolkit will act as your companion.</h1>
                 </Grid>
                 <Grid item sm={12} md={6} className={[classes.sectionDescription, classes.gridResponsive]}>
                     <div>
-                        The Whole Family Approach isn’t just a philosophy, it’s a set of practical tools — a group of activities and reflection prompts designed to help you understand, acknowledge, and move beyond your current situation.
+                        Cộng hưởng isn’t just a philosophy, it’s a set of practical tools — a group of activities and reflection prompts designed to help you understand, acknowledge, and move beyond your current situation.
                         ‍<br /> <br />
                         You can do the activities in the tools, on your own, with your coach, and in some cases, with your family.
                     </div>
@@ -133,7 +149,7 @@ export default function Toolkit() {
                         Where should you start?
                     </h1>
                     <h2 className={classes.subTitle} style={{ textAlign: "center", padding: "0 22vw", marginBottom: "2vw" }}>
-                        There’s no wrong way to dig in and start the Whole Family Approach, but with more than 15 tools, you might not know where to begin.
+                        There’s no wrong way to dig in and start Cộng hưởng, but with more than 15 tools, you might not know where to begin.
                     </h2>
                 </div>
                 <img src={shape} alt="shape" className={classes.banner}></img>
@@ -145,7 +161,7 @@ export default function Toolkit() {
                             <div style={{ fontSize: "14px", lineHeight: "150%" }}>
                                 Collections are sets of tools we’ve grouped together to help guide you in tackling a big aspirations you might have like: Strengthening your relationships or "Setting goals with your family".
                                 <br /> <br />
-                                Collections can help you jumpstart your work in the Whole Family Approach.
+                                Collections can help you jumpstart your work in Cộng hưởng.
                             </div>
                             <br />
                         </Grid>
@@ -163,7 +179,7 @@ export default function Toolkit() {
                             <div className={classes.sectionSubHeader}>Let a coach, or a mentor guide you along the way.</div>
                             <br />
                             <div style={{ fontSize: "14px", lineHeight: "150%" }}>
-                                Many people work with someone who can act as their coach and guide them through the Whole Family Approach, selecting the right, next tool to work on.
+                                Many people work with someone who can act as their coach and guide them through Cộng hưởng, selecting the right, next tool to work on.
                             </div>
                             <br />
                         </Grid>
@@ -176,7 +192,7 @@ export default function Toolkit() {
                         The Tools
                     </h1>
                     <h2 className={classes.subTitle} style={{ textAlign: "center", padding: "0 22vw", marginBottom: "2vw" }}>
-                        There’s no wrong way to dig in and start the Whole Family Approach, but with more than 15 tools, you might not know where to begin.
+                        There’s no wrong way to dig in and start Cộng hưởng, but with more than 15 tools, you might not know where to begin.
                     </h2>
                 </div>
             </Grid>
