@@ -1,22 +1,25 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.491e96c8.css",
-    "main.js": "/cong-huong/static/js/main.ca35c5d6.js",
+    "main.js": "/cong-huong/static/js/main.6b62c799.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
+    "static/media/Slide mô tả dự án.pdf": "/cong-huong/static/media/Slide mô tả dự án.f69c292bb387599842df.pdf",
     "static/media/toolkit-banner.png": "/cong-huong/static/media/toolkit-banner.9f1164b28f9a02c23777.png",
     "static/media/hero-banner.png": "/cong-huong/static/media/hero-banner.407f8a08f2181d146304.png",
     "static/media/divider-banner.png": "/cong-huong/static/media/divider-banner.45903a6aca52b8a5240c.png",
     "static/media/divider-banner2.jpg": "/cong-huong/static/media/divider-banner2.c390791710f0956e8be5.jpg",
     "static/media/shape.png": "/cong-huong/static/media/shape.e6b92e22a75c6cbd0307.png",
+    "static/media/about-image.png": "/cong-huong/static/media/about-image.65e17a2971570cecc9f2.png",
+    "static/media/about-hero-banner.png": "/cong-huong/static/media/about-hero-banner.a2164630cb6d01d9aca3.png",
     "static/media/toolkit-divider-banner.png": "/cong-huong/static/media/toolkit-divider-banner.e0b66e09337fc1b9e134.png",
     "static/media/ending-banner.png": "/cong-huong/static/media/ending-banner.b106a7f88cafc382db2f.png",
     "index.html": "/cong-huong/index.html",
     "main.491e96c8.css.map": "/cong-huong/static/css/main.491e96c8.css.map",
-    "main.ca35c5d6.js.map": "/cong-huong/static/js/main.ca35c5d6.js.map",
+    "main.6b62c799.js.map": "/cong-huong/static/js/main.6b62c799.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.491e96c8.css",
-    "static/js/main.ca35c5d6.js"
+    "static/js/main.6b62c799.js"
   ]
 }
