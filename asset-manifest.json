@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.491e96c8.css",
-    "main.js": "/cong-huong/static/js/main.6b62c799.js",
+    "main.js": "/cong-huong/static/js/main.6343b50a.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
     "static/media/Slide mô tả dự án.pdf": "/cong-huong/static/media/Slide mô tả dự án.f69c292bb387599842df.pdf",
     "static/media/toolkit-banner.png": "/cong-huong/static/media/toolkit-banner.9f1164b28f9a02c23777.png",
@@ -15,11 +15,11 @@
     "static/media/ending-banner.png": "/cong-huong/static/media/ending-banner.b106a7f88cafc382db2f.png",
     "index.html": "/cong-huong/index.html",
     "main.491e96c8.css.map": "/cong-huong/static/css/main.491e96c8.css.map",
-    "main.6b62c799.js.map": "/cong-huong/static/js/main.6b62c799.js.map",
+    "main.6343b50a.js.map": "/cong-huong/static/js/main.6343b50a.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.491e96c8.css",
-    "static/js/main.6b62c799.js"
+    "static/js/main.6343b50a.js"
   ]
 }
