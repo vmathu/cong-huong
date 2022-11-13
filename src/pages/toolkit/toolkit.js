@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
+import ScrollButton from "../../components/scrollBtn";
 
 import toolkitBanner from "../../images/toolkit-banner.png";
 import dividerBanner from "../../images/toolkit-divider-banner.png";
@@ -198,6 +199,7 @@ export default function Toolkit() {
                 </iframe>
             </Grid>
             <Footer />
+            <ScrollButton />
         </div>
     );
 }

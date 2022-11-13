@@ -1,15 +1,19 @@
 import './App.css';
 
 import React from "react";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import HomePage from "./pages/home-page/homePage";
 import Toolkit from "./pages/toolkit/toolkit";
 import OurStory from "./pages/our-story/ourStory";
+
+import ScrollToTop from './components/scrollToTop';
 
 function App() {
   return (
     <div className="App">
       <Router basename='/cong-huong'>
+        <ScrollToTop />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
         </Routes>

@@ -2,6 +2,7 @@ import { Button, Grid, makeStyles } from "@material-ui/core";
 
 import Footer from "../../components/footer";
 import NavBar from "../../components/navBar";
+import ScrollButton from "../../components/scrollBtn";
 
 import aboutHeroBanner from "../../images/about-hero-banner.png";
 import aboutImage from "../../images/about-image.png";
@@ -242,6 +243,7 @@ export default function OurStory() {
                 </div>
             </Grid>
             <Footer />
+            <ScrollButton />
         </div>
     );
 }

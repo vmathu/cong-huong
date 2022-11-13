@@ -37,7 +37,6 @@ const useStyles = makeStyles(theme => ({
     navBarContainer: {
         padding: "1% 7%",
         background: "#F8EAEA",
-        position: "fix",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center"

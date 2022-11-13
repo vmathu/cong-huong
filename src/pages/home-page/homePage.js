@@ -11,6 +11,7 @@ import endingBanner from "../../images/ending-banner.png";
 
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
+import ScrollButton from "../../components/scrollBtn";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -271,6 +272,7 @@ export default function HomePage() {
                 </Grid>
             </Grid>
             <Footer />
+            <ScrollButton />
         </div>
     );
 }
