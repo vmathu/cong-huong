@@ -4,10 +4,8 @@ import Button from '@material-ui/core/Button';
 
 import { Link } from "react-router-dom";
 
-import heroBanner from "../../images/hero-banner.png";
-import dividerBanner from "../../images/divider-banner.png";
-import dividerBanner2 from "../../images/divider-banner2.jpg";
-import endingBanner from "../../images/ending-banner.png";
+import endingBanner from "../../images/Illustration3.png";
+import heroBanner from "../../images/Illustration5.png"; 
 
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
@@ -26,9 +24,10 @@ const useStyles = makeStyles((theme) => ({
         background: "#F8EAEA"
     },
     header: {
-        fontFamily: 'Alice',
-        fontWeight: 500,
-        fontSize: "90px",
+        color: "#00AFE7", 
+        fontFamily: 'Montserrat',
+        fontWeight: 600,
+        fontSize: "70px",
         lineHeight: "100%",
         textAlign: "center",
         padding: "10vw 17vw",
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 400,
         fontSize: '20px',
         lineHeight: "150%",
-        padding: "0 30vw",
+        padding: "0 24vw",
         marginBottom: 0,
         [theme.breakpoints.down("xs")]: {
             fontSize: "16px",
@@ -59,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     sectionHeader: {
-        fontFamily: 'Alice',
+        color: "#00AFE7", 
+        fontFamily: 'Montserrat',
         fontWeight: 500,
         fontSize: "50px",
         lineHeight: "120%",
@@ -151,7 +151,7 @@ export default function HomePage() {
                 </Grid>
             </Grid>
             <Grid container style={{ background: "#F8EAEA", }}>
-                <img src={dividerBanner} alt="divider banner" className={classes.banner}></img>
+                {/* <img src={dividerBanner} alt="divider banner" className={classes.banner}></img> */}
                 <div className={classes.section}>
                     <Grid item style={{ width: "100%" }}>
                         <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>Cộng Hưởng Yêu Thương như thế nào?</h1>
@@ -205,8 +205,8 @@ export default function HomePage() {
                     <br />
                 </Grid>
             </Grid>
-            <img src={dividerBanner2} alt="divider banner 2" style={{ width: "100%" }}></img>
-            <Grid container className={classes.section}>
+            {/* <img src={dividerBanner2} alt="divider banner 2" style={{ width: "100%" }}></img> */}
+            {/* <Grid container className={classes.section}>
                 <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
                     <div className={classes.sectionSubHeader}>Your Story</div>
                     <br />
@@ -259,7 +259,7 @@ export default function HomePage() {
                     </div>
                     <br />
                 </Grid>
-            </Grid>
+            </Grid> */}
             <Grid container className={[classes.section, classes.banner]} style={{ alignItems: "center" }}>
                 <Grid item sm={12} md={7} className={classes.banner}>
                     <img src={endingBanner} alt="ending banner" style={{ width: "100%" }}></img>

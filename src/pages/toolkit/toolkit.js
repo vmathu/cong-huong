@@ -44,8 +44,9 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     header: {
-        fontFamily: 'Alice',
-        fontWeight: 500,
+        color: "#00AFE7", 
+        fontFamily: 'Montserrat',
+        fontWeight: 600,
         fontSize: "90px",
         textAlign: "left",
         lineHeight: "100%",
@@ -86,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     sectionHeader: {
-        fontFamily: 'Alice',
+        fontFamily: 'Montserrat',
         fontWeight: 500,
         fontSize: "50px",
         lineHeight: "120%",

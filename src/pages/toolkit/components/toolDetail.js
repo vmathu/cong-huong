@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "left"
     },
     header: {
-        fontFamily: 'Alice',
+        fontFamily: 'Montserrat',
         fontWeight: 500,
         fontSize: "50px",
         textAlign: "left",
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     sectionHeader: {
-        fontFamily: 'Alice',
+        fontFamily: 'Montserrat',
         fontWeight: 500,
         fontSize: "50px",
         lineHeight: "120%",
@@ -159,7 +159,7 @@ export default function ToolDetail(props) {
                 <Grid>
                     <Grid container style={{ justifyContent: "space-between" }}>
                         <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "40px" }}>
-                            <div className={classes.sectionDescription} style={{ fontFamily: "Alice" }}>
+                            <div className={classes.sectionDescription} style={{ fontFamily: "Montserrat" }}>
                                 “This tool helped [my client] to understand that it takes a whole village to raise a child. She was perceptive to it and it helped her open her eyes. This helped her to think about making a plan for when she has a child.”
                             </div>
                             <br />
@@ -169,7 +169,7 @@ export default function ToolDetail(props) {
                             <br />
                         </Grid>
                         <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "40px" }}>
-                            <div className={classes.sectionDescription} style={{ fontFamily: "Alice" }}>
+                            <div className={classes.sectionDescription} style={{ fontFamily: "Montserrat" }}>
                                 “This is the thing we have been missing. We don’t have anything that really takes the whole family approach and makes it practical and tangible.”
                             </div>
                             <br />
@@ -179,7 +179,7 @@ export default function ToolDetail(props) {
                             <br />
                         </Grid>
                         <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "40px" }}>
-                            <div className={classes.sectionDescription} style={{ fontFamily: "Alice" }}>
+                            <div className={classes.sectionDescription} style={{ fontFamily: "Montserrat" }}>
                                 “I’m excited to test this in our new homelessness program because it’s really about getting to those underlying systemic issues that affects generations.”
                             </div>
                             <br />
