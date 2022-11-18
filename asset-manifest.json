@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.491e96c8.css",
-    "main.js": "/cong-huong/static/js/main.2f9b72cc.js",
+    "main.js": "/cong-huong/static/js/main.f42a5a11.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
     "static/media/Nhật ký.png": "/cong-huong/static/media/Nhật ký.693a6b239f351177a198.png",
     "static/media/Trò chơi tình huống.png": "/cong-huong/static/media/Trò chơi tình huống.e8026ca491f81ccf81b9.png",
@@ -20,11 +20,11 @@
     "static/media/ending-banner.png": "/cong-huong/static/media/ending-banner.b106a7f88cafc382db2f.png",
     "index.html": "/cong-huong/index.html",
     "main.491e96c8.css.map": "/cong-huong/static/css/main.491e96c8.css.map",
-    "main.2f9b72cc.js.map": "/cong-huong/static/js/main.2f9b72cc.js.map",
+    "main.f42a5a11.js.map": "/cong-huong/static/js/main.f42a5a11.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.491e96c8.css",
-    "static/js/main.2f9b72cc.js"
+    "static/js/main.f42a5a11.js"
   ]
 }
