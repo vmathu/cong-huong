@@ -1,28 +1,25 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.ff808aec.css",
-    "main.js": "/cong-huong/static/js/main.1dc4a0ca.js",
+    "main.js": "/cong-huong/static/js/main.3718f561.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
     "static/media/Nhật ký.png": "/cong-huong/static/media/Nhật ký.693a6b239f351177a198.png",
     "static/media/Trò chơi tình huống.png": "/cong-huong/static/media/Trò chơi tình huống.e8026ca491f81ccf81b9.png",
     "static/media/Challenge.png": "/cong-huong/static/media/Challenge.e374fcfa86325ea41751.png",
     "static/media/Illustration5.png": "/cong-huong/static/media/Illustration5.095ce926fb86b3cac345.png",
     "static/media/Illustration3.png": "/cong-huong/static/media/Illustration3.51b7d105402eb922f54d.png",
-    "static/media/toolkit-banner.png": "/cong-huong/static/media/toolkit-banner.9f1164b28f9a02c23777.png",
     "static/media/Thẻ cảm xúc.png": "/cong-huong/static/media/Thẻ cảm xúc.96b6ad2b8f0c49094c15.png",
     "static/media/Poster.png": "/cong-huong/static/media/Poster.212377f28e45c3561c94.png",
-    "static/media/shape.png": "/cong-huong/static/media/shape.e6b92e22a75c6cbd0307.png",
     "static/media/Sổ tình huống.png": "/cong-huong/static/media/Sổ tình huống.02b2442a9307c559718f.png",
     "static/media/about-image.png": "/cong-huong/static/media/about-image.65e17a2971570cecc9f2.png",
     "static/media/about-hero-banner.png": "/cong-huong/static/media/about-hero-banner.a2164630cb6d01d9aca3.png",
-    "static/media/toolkit-divider-banner.png": "/cong-huong/static/media/toolkit-divider-banner.e0b66e09337fc1b9e134.png",
     "index.html": "/cong-huong/index.html",
     "main.ff808aec.css.map": "/cong-huong/static/css/main.ff808aec.css.map",
-    "main.1dc4a0ca.js.map": "/cong-huong/static/js/main.1dc4a0ca.js.map",
+    "main.3718f561.js.map": "/cong-huong/static/js/main.3718f561.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff808aec.css",
-    "static/js/main.1dc4a0ca.js"
+    "static/js/main.3718f561.js"
   ]
 }
