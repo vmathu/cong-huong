@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
 
 import endingBanner from "../../images/Illustration3.png";
-import heroBanner from "../../images/Illustration5.png"; 
+import heroBanner from "../../images/Illustration5.png";
 
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         background: "#F8EAEA"
     },
     header: {
-        color: "#00AFE7", 
+        color: "#00AFE7",
         fontFamily: 'Montserrat',
         fontWeight: 600,
         fontSize: "70px",
@@ -58,10 +58,10 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     sectionHeader: {
-        color: "#00AFE7", 
+        color: "#00AFE7",
         fontFamily: 'Montserrat',
         fontWeight: 500,
-        fontSize: "50px",
+        fontSize: "40px",
         lineHeight: "120%",
         textAlign: "left",
         marginTop: 0,
@@ -145,7 +145,7 @@ export default function HomePage() {
                     <br />
                     <Link to="/toolkit" style={{ textDecoration: "none" }}>
                         <Button variant="constained" className={classes.button}>
-                            THE TOOLKIT
+                            BỘ TOOLKIT
                         </Button>
                     </Link>
                 </Grid>
@@ -158,43 +158,43 @@ export default function HomePage() {
                     </Grid>
                     <Grid>
                         <Grid container style={{ justifyContent: "space-between" }}>
-                            <Grid item xs={12} sm={6} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Cho con bạn biết</div>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
+                                <div className={classes.sectionSubHeader}>Đưa con đến một tương lai đẹp nhất</div>
                                 <br />
                                 <div style={{ fontSize: "14px" }}>
-                                    The [Cộng hưởng] starts in two places: with you and with your family members. It includes resources for individuals of every age. This means that the tools are child-focused with parent elements, and parent-focused with child elements.
+                                    Bộ kit được xây dựng dựa trên những kiến thức khoa học với sự hỗ trợ của các chuyên gia giáo dục và phát triển trẻ em. Những hoạt động xây dựng trong bộ kit sẽ giúp con bạn được lớn lên trong một môi trường giáo dục lành mạnh, hỗ trợ con bạn phát triển trên nhiều phương diện, cả về tâm lý lẫn sinh lý.
                                     <br /> <br />
-                                    NOTE: As we launch this first pilot, the focus is on adult tools. Kid-centered tools will be incorporated in future versions.
+                                    Sứ mệnh của chúng tôi chính là đồng hành cùng bạn và con trong những bước đầu tiên của chuyến hành trình cuộc sống.
                                 </div>
                                 <br />
                             </Grid>
-                            <Grid item xs={12} sm={6} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
                                 <div className={classes.sectionSubHeader}>Dành cho bạn và dành cho con</div>
                                 <br />
                                 <div style={{ fontSize: "14px" }}>
-                                    The approach helps you examine the root causes of your experience with activities designed build a strong foundation that will support the changes you need to make to reach the future you want.
+                                    Chúng tôi tin rằng hạnh phúc của mỗi gia đình đến từ việc cộng hưởng yêu thương từ hai phía. Bộ kit sẽ hỗ trợ gia đình bạn thực hiện điều đó thông qua hoạt động cung cấp kiến thức cho cả bạn và con, đồng thời tăng cường gắn kết và tương tác trong gia đình.
                                     <br /> <br />
-                                    The tools work across three levels: goal-setting, recognizing patterns and making connections between the events in your life, and shifting mindsets.
+                                    {/* The tools work across three levels: goal-setting, recognizing patterns and making connections between the events in your life, and shifting mindsets. */}
                                 </div>
                                 <br />
                             </Grid>
-                            {/* <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Sets you up for the marathon.</div>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
+                                <div className={classes.sectionSubHeader}>Cùng chơi, cùng học và hơn thế nữa</div>
                                 <br />
                                 <div style={{ fontSize: "14px" }}>
-                                    Using the approach, won’t be easy and at times, it won’t feel great. Healing can be a slow and uncomfortable process. Unraveling generations of struggle takes time. But the changes and liberation you’re seeking is possible and Cộng hưởng will help you get there.
+                                    Hơn cả một bộ trò chơi và hơn cả một cuốn sách, bộ kit được xây dựng với những hoạt động thú vị nhưng không kém phần bổ ích với các giá trị truyền tải được gửi gắm nguyên vẹn trong từng vật phẩm. Quan trọng hơn tất cả, bộ kit chính là phương tiện để kết nối bạn và con.
                                 </div>
                                 <br />
-                            </Grid> */}
+                            </Grid>
                         </Grid>
                     </Grid>
                 </div>
             </Grid>
             <Grid container className={classes.section}>
-                <Grid item sm={12} md={4}>
-                    <h1 className={classes.sectionHeader}>Cộng hưởng encourages you to explore all of the dimensions that make you, you.</h1>
+                <Grid item sm={12} md={12}>
+                    <h1 className={classes.sectionHeader}>Đồng hành cùng bạn và con trong những bước đầu tiên của chuyến hành trình cuộc sống chính là sứ mệnh của chúng tôi.</h1>
                 </Grid>
-                <Grid item sm={12} md={7} className={classes.sectionDescription}>
+                {/* <Grid item sm={12} md={6} className={classes.sectionDescription}>
                     <div>
                         Picture your favorite place. What makes it special?
                         <br /> <br />
@@ -203,7 +203,7 @@ export default function HomePage() {
                         In the same way, the Whole Family Toolkit invites you to examine and acknowledge all of the dimensions of your experience — your story, your people, your hopes, your plans, and your joys.
                     </div>
                     <br />
-                </Grid>
+                </Grid> */}
             </Grid>
             {/* <img src={dividerBanner2} alt="divider banner 2" style={{ width: "100%" }}></img> */}
             {/* <Grid container className={classes.section}>
@@ -265,10 +265,10 @@ export default function HomePage() {
                     <img src={endingBanner} alt="ending banner" style={{ width: "100%" }}></img>
                 </Grid>
                 <Grid item sm={12} md={4} className={classes.gridResponsive}>
-                    <h1 className={classes.sectionHeader}>Get started on your journey.</h1>
+                    <h1 className={classes.sectionHeader}>Cùng bắt đầu hành trình của bạn</h1>
                     <Link to="/toolkit" style={{ textDecoration: "none" }}>
                         <Button variant="constained" className={classes.button2}>
-                            THE TOOLKIT
+                            BỘ TOOLKIT
                         </Button>
                     </Link>
                 </Grid>

@@ -9,9 +9,9 @@ import ScrollButton from "../../components/scrollBtn";
 
 import Tool from "./components/tool";
 
-import toolkitBanner from "../../images/toolkit-banner.png";
-import dividerBanner from "../../images/toolkit-divider-banner.png";
-import shape from "../../images/shape.png";
+import toolkitBanner from "../../images/Illustration3.png";
+// import dividerBanner from "../../images/toolkit-divider-banner.png";
+// import shape from "../../images/shape.png";
 
 import { toolkitData } from "../../data/data";
 
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
     banner: {
         width: "100%",
-        textAlign: "left"
+        textAlign: "left", 
     },
     bannerResponsive: {
         [theme.breakpoints.up("lg")]: {
@@ -44,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     header: {
-        color: "#00AFE7", 
+        color: "#00AFE7",
         fontFamily: 'Montserrat',
         fontWeight: 600,
         fontSize: "90px",
         textAlign: "left",
         lineHeight: "100%",
-        margin: "20vw 17vw 0",
+        margin: 0, 
         [theme.breakpoints.down("sm")]: {
             textAlign: "center",
         },
@@ -64,7 +64,6 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 400,
         fontSize: '20px',
         lineHeight: "150%",
-        padding: "0 60vw 0 17vw",
         margin: "2vw 0 0 0",
         textAlign: "left",
         [theme.breakpoints.down("sm")]: {
@@ -87,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     sectionHeader: {
+        color: "#00AFE7",
         fontFamily: 'Montserrat',
         fontWeight: 500,
         fontSize: "50px",
@@ -136,7 +136,7 @@ export default function Toolkit() {
     return (
         <div className={classes.root}>
             <NavBar current="Toolkit" />
-            <div style={{ display: "flex", flexDirection: "column" }} className={classes.banner}>
+            {/* <div style={{ display: "flex", flexDirection: "column" }} className={classes.banner}>
                 <h1 className={classes.header}>
                     The Tools
                 </h1>
@@ -144,10 +144,25 @@ export default function Toolkit() {
                     Một sự khởi đầu “Cùng con”
                 </h2>
             </div>
-            <img src={toolkitBanner} alt="toolkit banner" className={[classes.banner + " " + classes.heroBanner]} ></img>
+            <img src={toolkitBanner} alt="toolkit banner" className={[classes.banner + " " + classes.heroBanner]} ></img> */}
+            <Grid container className={classes.banner} style={{marginTop: "6vw"}}>
+                <Grid item sm={12} md={5}>
+                    <div style={{ display: "flex", flexDirection: "column", padding: "10vw 0 0 8vw", justifyContent: "center", width: "100%"}} >
+                        <h1 className={classes.header}>
+                            The Tools
+                        </h1>
+                        <h2 className={classes.subTitle}>
+                            Một sự khởi đầu “Cùng con”
+                        </h2>
+                    </div>
+                </Grid>
+                <Grid item sm={12} md={7}>
+                <img src={toolkitBanner} alt="toolkit banner" className={[classes.banner]} style={{margin: "2vw", width: "90%"}}></img>
+                </Grid>
+            </Grid>
             <Grid container className={classes.section} style={{ paddingBottom: 0 }}>
                 <Grid item sm={12} md={5}>
-                    <h1 className={classes.sectionHeader}>This toolkit will act as your companion.</h1>
+                    <h1 className={classes.sectionHeader}>Bộ toolkit sẽ đóng vai trò như người bạn đồng hành của bạn</h1>
                 </Grid>
                 <Grid item sm={12} md={6} className={[classes.sectionDescription, classes.gridResponsive]}>
                     <div>
@@ -156,9 +171,9 @@ export default function Toolkit() {
                         Bộ Kit “Cùng con” giúp cha mẹ có thể thấu hiểu được những vấn đề về tâm sinh lý của con, tăng cường tương tác và kết nối trong gia đình
                     </div>
                 </Grid>
-                <img src={dividerBanner} alt="toolkit divider banner" className={[classes.banner + " " + classes.bannerResponsive]}></img>
+                {/* <img src={dividerBanner} alt="toolkit divider banner" className={[classes.banner + " " + classes.bannerResponsive]} style={{marginBottom: "-6vw"}}></img> */}
             </Grid>
-            <Grid container className={classes.section} style={{ background: "#F8EAEA", marginTop: "-6vw" }}>
+            {/* <Grid container className={classes.section} style={{ background: "#F8EAEA"}}>
                 <div className={classes.banner}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center", marginTop: "4vw" }}>
                         Where should you start?
@@ -200,7 +215,7 @@ export default function Toolkit() {
                         </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
+            </Grid> */}
             <Grid container className={[classes.section, classes.tools]}>
                 <div className={classes.banner}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
