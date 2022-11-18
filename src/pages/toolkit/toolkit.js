@@ -140,7 +140,7 @@ export default function Toolkit() {
                     The Tools
                 </h1>
                 <h2 className={classes.subTitle}>
-                    The way to get started with Cộng hưởng
+                    Một sự khởi đầu “Cùng con”
                 </h2>
             </div>
             <img src={toolkitBanner} alt="toolkit banner" className={[classes.banner + " " + classes.heroBanner]} ></img>
@@ -150,9 +150,9 @@ export default function Toolkit() {
                 </Grid>
                 <Grid item sm={12} md={6} className={[classes.sectionDescription, classes.gridResponsive]}>
                     <div>
-                        Cộng hưởng isn’t just a philosophy, it’s a set of practical tools — a group of activities and reflection prompts designed to help you understand, acknowledge, and move beyond your current situation.
+                        Bộ Kit “Cùng con” là sản phẩm cung cấp các kiến thức và hoạt động dành cho các bậc phụ huynh có con ở độ tuổi từ 4-7.
                         ‍<br /> <br />
-                        You can do the activities in the tools, on your own, with your coach, and in some cases, with your family.
+                        Bộ Kit “Cùng con” giúp cha mẹ có thể thấu hiểu được những vấn đề về tâm sinh lý của con, tăng cường tương tác và kết nối trong gia đình
                     </div>
                 </Grid>
                 <img src={dividerBanner} alt="toolkit divider banner" className={[classes.banner + " " + classes.bannerResponsive]}></img>
@@ -208,7 +208,7 @@ export default function Toolkit() {
                 </div>
                 {toolkitData.map((tool) => (
                     <Grid item xs={12} sm={6} md={4} className={classes.tool}>
-                        <Link to={`/tool-detail/${tool._id}`} style={{textDecoration: "none", textAlign: "-webkit-center"}}>
+                        <Link to={`/tool-detail/${tool._id}`} style={{ textDecoration: "none", textAlign: "-webkit-center" }}>
                             <Tool
                                 img={tool.img}
                                 title={tool.title}

@@ -133,7 +133,7 @@ export default function ToolDetail(props) {
                     <img src={data.img} alt={data.title} className={classes.banner}></img>
                 </Grid>
             </Grid>
-            <Grid container className={[classes.section, classes.sectionReverse]} style={{ background: "#F8EAEA" }}>
+            {/* <Grid container className={[classes.section, classes.sectionReverse]} style={{ background: "#F8EAEA" }}>
                 <Grid item sm={12} md={6} style={{ alignSelf: "flex-end" }}>
                     <img src={data.img} alt={data.title} className={classes.banner}></img>
                 </Grid>
@@ -247,7 +247,7 @@ export default function ToolDetail(props) {
                         Partner Organizations
                     </h1>
                 </div>
-            </Grid>
+            </Grid> */}
         </div>
     )
 }
