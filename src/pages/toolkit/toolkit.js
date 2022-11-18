@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { makeStyles } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 
@@ -5,11 +7,13 @@ import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
 import ScrollButton from "../../components/scrollBtn";
 
+import Tool from "./components/tool";
+
 import toolkitBanner from "../../images/toolkit-banner.png";
 import dividerBanner from "../../images/toolkit-divider-banner.png";
 import shape from "../../images/shape.png";
 
-import file from "../../files/Slide mô tả dự án.pdf";
+import { toolkitData } from "../../data/data";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -116,11 +120,18 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             textAlign: "center"
         },
+    },
+    tools: {
+        justifyContent: "flex-start",
+    },
+    tool: {
+        padding: "8px",
     }
 }))
 
 export default function Toolkit() {
     const classes = useStyles();
+
     return (
         <div className={classes.root}>
             <NavBar current="Toolkit" />
@@ -189,14 +200,23 @@ export default function Toolkit() {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid container className={classes.section}>
+            <Grid container className={[classes.section, classes.tools]}>
                 <div className={classes.banner}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
                         The Tools
                     </h1>
                 </div>
-                <iframe src={file} width="100%" height="710vw">
-                </iframe>
+                {toolkitData.map((tool) => (
+                    <Grid item xs={12} sm={6} md={4} className={classes.tool}>
+                        <Link to={`/tool-detail/${tool._id}`} style={{textDecoration: "none", textAlign: "-webkit-center"}}>
+                            <Tool
+                                img={tool.img}
+                                title={tool.title}
+                                description={tool.description}
+                            />
+                        </Link>
+                    </Grid>
+                ))}
             </Grid>
             <Footer />
             <ScrollButton />
