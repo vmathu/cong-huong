@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import Button from '@material-ui/core/Button';
 
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 // import endingBanner from "../../images/Illustration3.png";
 import heroBanner from "../../images/Illustration5.png";
@@ -137,15 +138,20 @@ export default function HomePage() {
                     Hộp “Cùng con” gồm những món đồ được thiết kế chuyên biệt với từng mục đích khác nhau giúp cha mẹ có thể tiếp thu được những kiến thức nuôi dạy con hiệu quả và khoa học, đồng thời tạo cơ hội để cha mẹ và con cái có thể trở nên gắn kết hơn.
                 </h2>
                 <div style={{ margin: "4vw 0" }} >
-                    <a href="https://forms.gle/enJAmVxbD55PHZMq6" style={{ textDecoration: "none" }}>
+                    <HashLink to="/#combo" style={{ textDecoration: "none" }} smooth>
                         <Button variant="constained" className={classes.button2}>
-                            ĐẶT TRƯỚC NGAY
+                            TÌM HIỂU THÊM
+                        </Button>
+                    </HashLink>
+                    <a href="#combo" style={{ textDecoration: "none" }}>
+                        <Button variant="constained" className={classes.button2}>
+                            TÌM HIỂU THÊM
                         </Button>
                     </a>
                 </div>
             </div>
             <img src={heroBanner} alt="hero banner" className={classes.banner} style={{ background: "none", marginTop: "-20vw" }}></img>
-            <Grid container className={[classes.section, classes.tools]} style={{ justifyContent: "center" }}>
+            <Grid container className={[classes.section, classes.tools]} style={{ justifyContent: "center" }} id="combo">
                 <div className={classes.banner} style={{ background: "none" }}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
                         Bộ sản phẩm Cùng Con
