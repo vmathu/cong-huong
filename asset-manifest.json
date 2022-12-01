@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.ff808aec.css",
-    "main.js": "/cong-huong/static/js/main.c5a92165.js",
+    "main.js": "/cong-huong/static/js/main.ea16571f.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
     "static/media/Nhật ký.png": "/cong-huong/static/media/Nhật ký.693a6b239f351177a198.png",
     "static/media/MR.png": "/cong-huong/static/media/MR.8c7d27190b57e4702dc9.png",
@@ -17,11 +17,11 @@
     "static/media/about-hero-banner.png": "/cong-huong/static/media/about-hero-banner.a2164630cb6d01d9aca3.png",
     "index.html": "/cong-huong/index.html",
     "main.ff808aec.css.map": "/cong-huong/static/css/main.ff808aec.css.map",
-    "main.c5a92165.js.map": "/cong-huong/static/js/main.c5a92165.js.map",
+    "main.ea16571f.js.map": "/cong-huong/static/js/main.ea16571f.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff808aec.css",
-    "static/js/main.c5a92165.js"
+    "static/js/main.ea16571f.js"
   ]
 }
