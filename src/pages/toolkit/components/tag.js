@@ -9,7 +9,10 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '12px', 
         fontWeight: "500", 
         marginTop: "12px", 
-        fontSize: "16px"
+        fontSize: "16px", 
+        height: "40px", 
+        display: "flex", 
+        alignItems: "center", 
     },
 }));
 

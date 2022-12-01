@@ -112,14 +112,14 @@ export default function NavBar(props) {
             text: 'Home',
             link: '/',
         },
-        {
-            text: 'Toolkit',
-            link: '/toolkit',
-        },
-        {
-            text: 'Our Story',
-            link: '/our-story'
-        }
+        // {
+        //     text: 'Toolkit',
+        //     link: '/toolkit',
+        // },
+        // {
+        //     text: 'Our Story',
+        //     link: '/our-story'
+        // }
     ]
 
     return (

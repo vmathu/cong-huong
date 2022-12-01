@@ -39,7 +39,7 @@ function Footer() {
     const navItems = [
         {
             text: 'Email',
-            link: 'mailto:anhthuvominh1@gmail.com?subject=Hello',
+            link: 'mailto:conghuongyeuthuong@gmail.com?subject=Hello',
         },
         {
             text: 'Terms of Use',

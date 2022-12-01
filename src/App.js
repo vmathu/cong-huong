@@ -10,7 +10,8 @@ import OurStory from "./pages/our-story/ourStory";
 import ToolDetailPage from './pages/toolkit/toolDetailPage';
 
 import ScrollToTop from './components/scrollToTop';
-import { toolkitData } from './data/data';
+import { comboData, toolkitData } from './data/data';
+import ComboDetailPage from './pages/home-page/comboDetailPage';
 
 function App() {
   const [toolId, setToolId] = React.useState([]);
@@ -23,6 +24,21 @@ function App() {
 
     try {
       getAllTool();
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
+
+  const [comboId, setComboId] = React.useState([]);
+  React.useEffect(() => {
+    async function getAllCombo() {
+      const combos = comboData;
+      const comboId = combos.map((combo) => combo._id);
+      setComboId(comboId.map((id) => id));
+    }
+
+    try {
+      getAllCombo();
     } catch (error) {
       console.error(error);
     }
@@ -42,15 +58,25 @@ function App() {
           <Route exact path="/our-story" element={<OurStory />} />
         </Routes>
         {toolId.map((id) => (
-            <Link to={`tool-detail/${id}`} />
-          ))}
-          <Routes>
-            <Route
-              exact
-              path="/tool-detail/:id"
-              element={<ToolDetailPage />}
-            />
-          </Routes>
+          <Link to={`tool-detail/${id}`} />
+        ))}
+        <Routes>
+          <Route
+            exact
+            path="/tool-detail/:id"
+            element={<ToolDetailPage />}
+          />
+        </Routes>
+        {comboId.map((id) => (
+          <Link to={`combo-detail/${id}`} />
+        ))}
+        <Routes>
+          <Route
+            exact
+            path="/combo-detail/:id"
+            element={<ComboDetailPage />}
+          />
+        </Routes>
       </Router>
     </div>
   );

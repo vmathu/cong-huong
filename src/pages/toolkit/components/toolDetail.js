@@ -1,5 +1,5 @@
-import { makeStyles, Grid, Button } from "@material-ui/core";
-import Tag from "./tag";
+import { makeStyles, Grid } from "@material-ui/core";
+// import Tag from "./tag";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -105,28 +105,20 @@ export default function ToolDetail(props) {
     const classes = useStyles();
 
     const data = props.data;
-    const tags = data.tags;
+    // const tags = data.tags;
 
     return (
         <div className={classes.root}> 
             <Grid container className={classes.section}>
                 <Grid item sm={12} md={5} style={{ alignSelf: "center", }}>
                     <div>
-                        <div style={{ textAlign: "left", color: "#00AFE7", fontWeight: "bold" }}>YOUR STORY</div>
+                        <div style={{ textAlign: "left", color: "#00AFE7", fontWeight: "bold" }}>SẢN PHẨM</div>
                         <h1 className={classes.header}>
-                            Get reacquainted with yourself
+                            {data.title}
                         </h1>
                         <h2 className={classes.subTitle}>
-                            Describe yourself in a way that, if someone were meeting you for the first time, they’d know the most important things about you.
+                            {data.description}
                         </h2>
-                    </div>
-                    <div>
-                        <div style={{ textAlign: "left", fontWeight: "bold", marginTop: "4vw" }}>NURTURES A SENSE OF</div>
-                        <div style={{display: "flex", flexDirection: "row"}}>
-                            {tags.map((tag) => (
-                                <Tag data={tag}/>
-                            ))}
-                        </div>
                     </div>
                 </Grid>
                 <Grid item sm={12} md={6}>

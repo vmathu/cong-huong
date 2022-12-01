@@ -219,7 +219,7 @@ export default function Toolkit() {
             <Grid container className={[classes.section, classes.tools]}>
                 <div className={classes.banner}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
-                        The Tools
+                        Sản phẩm trực tiếp
                     </h1>
                 </div>
                 {toolkitData.map((tool) => (

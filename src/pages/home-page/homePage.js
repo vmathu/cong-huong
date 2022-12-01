@@ -4,12 +4,16 @@ import Button from '@material-ui/core/Button';
 
 import { Link } from "react-router-dom";
 
-import endingBanner from "../../images/Illustration3.png";
+// import endingBanner from "../../images/Illustration3.png";
 import heroBanner from "../../images/Illustration5.png";
 
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
 import ScrollButton from "../../components/scrollBtn";
+
+import { comboData } from "../../data/data";
+
+import Combo from "./components/combo";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     },
     banner: {
         width: "100%",
-        background: "#F8EAEA"
+        background: "#F8EAEA",
     },
     header: {
         color: "#00AFE7",
@@ -30,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "70px",
         lineHeight: "100%",
         textAlign: "center",
-        padding: "10vw 17vw",
+        padding: "8vw 17vw",
         paddingBottom: 0,
         [theme.breakpoints.down("xs")]: {
             fontSize: "30px",
@@ -76,7 +80,10 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "24px",
         fontWeight: "500",
         [theme.breakpoints.down("sm")]: {
-            textAlign: "left",
+            fontSize: "20px"
+        },
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "16px"
         },
     },
     sectionDescription: {
@@ -121,16 +128,45 @@ export default function HomePage() {
     return (
         <div className={classes.root}>
             <NavBar current="Home" />
-            <div className={classes.banner}>
+            {/* Banner */}
+            <div className={classes.banner} style={{ paddingBottom: "20vw" }}>
                 <h1 className={classes.header}>
                     Cùng con khôn lớn, cộng hưởng yêu thương
                 </h1>
                 <h2 className={classes.subTitle}>
                     Hộp “Cùng con” gồm những món đồ được thiết kế chuyên biệt với từng mục đích khác nhau giúp cha mẹ có thể tiếp thu được những kiến thức nuôi dạy con hiệu quả và khoa học, đồng thời tạo cơ hội để cha mẹ và con cái có thể trở nên gắn kết hơn.
                 </h2>
+                <div style={{ margin: "4vw 0" }} >
+                    <a href="https://forms.gle/i5qe6JdGWAQrb77B7" style={{ textDecoration: "none" }}>
+                        <Button variant="constained" className={classes.button2}>
+                            ĐẶT TRƯỚC NGAY
+                        </Button>
+                    </a>
+                </div>
             </div>
-            <img src={heroBanner} alt="hero banner" className={classes.banner}></img>
-            <Grid container className={classes.section}>
+            <img src={heroBanner} alt="hero banner" className={classes.banner} style={{ background: "none", marginTop: "-20vw" }}></img>
+            <Grid container className={[classes.section, classes.tools]} style={{ justifyContent: "center" }}>
+                <div className={classes.banner} style={{ background: "none" }}>
+                    <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
+                        Bộ sản phẩm Cùng Con
+                    </h1>
+                    <h2 className={classes.sectionSubHeader}>Dự kiến ra mắt vào tháng 2/ 2023</h2>
+                </div>
+                {comboData.map((combo) => (
+                    <Grid item xs={12} sm={6} md={4} style={{ paddingRight: "8px" }}>
+                        <Link to={`/combo-detail/${combo._id}`} style={{ textDecoration: "none", textAlign: "-webkit-center" }}>
+                            <Combo
+                                img={combo.img}
+                                price={combo.price}
+                                title={combo.title}
+                                description={combo.description}
+                            />
+                        </Link>
+                    </Grid>
+                ))}
+            </Grid>
+            {/* Who are we */}
+            {/* <Grid container className={classes.section}>
                 <Grid item sm={12} md={5}>
                     <h1 className={classes.sectionHeader}>
                         Hộp “Cùng con” giúp cha mẹ nuôi dạy và phát triển con trẻ  hiệu quả và khoa học
@@ -140,7 +176,6 @@ export default function HomePage() {
                     <div>
                         Các phương pháp và kiến thức nuôi dạy con được truyền tải trong hộp “Cùng con” không đơn thuần chỉ là những kiến thức khô khan để cha mẹ học theo mà chúng được thiết kế dưới dạng các trò chơi trực quan
                         <br /> <br />
-                        {/* Seeing yourself and your experiences with fresh eyes requires courage and curiosity, but it’s the key to unlocking what’s next for you and your family. */}
                     </div>
                     <br />
                     <Link to="/toolkit" style={{ textDecoration: "none" }}>
@@ -149,9 +184,24 @@ export default function HomePage() {
                         </Button>
                     </Link>
                 </Grid>
-            </Grid>
-            <Grid container style={{ background: "#F8EAEA", }}>
-                {/* <img src={dividerBanner} alt="divider banner" className={classes.banner}></img> */}
+                <Grid item sm={12} md={6} className={classes.banner} style={{ background: "none" }}>
+                    <img src={endingBanner} alt="ending banner" style={{ width: "100%" }}></img>
+                </Grid>
+                <Grid item sm={12} md={6} className={classes.gridResponsive}>
+                    <h1 className={classes.sectionHeader}>Hộp “Cùng con” giúp cha mẹ nuôi dạy và phát triển con trẻ  hiệu quả và khoa học</h1>
+                    <div>
+                        Các phương pháp và kiến thức nuôi dạy con được truyền tải trong hộp “Cùng con” không đơn thuần chỉ là những kiến thức khô khan để cha mẹ học theo mà chúng được thiết kế dưới dạng các trò chơi trực quan
+                        <br /> <br />
+                    </div>
+                    <Link to="/toolkit" style={{ textDecoration: "none" }}>
+                        <Button variant="constained" className={classes.button2}>
+                            BỘ TOOLKIT
+                        </Button>
+                    </Link>
+                </Grid>
+            </Grid> */}
+            {/* <Grid container style={{ background: "#F8EAEA", }}>
+                <img src={dividerBanner} alt="divider banner" className={classes.banner}></img>
                 <div className={classes.section}>
                     <Grid item style={{ width: "100%" }}>
                         <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>Cộng Hưởng Yêu Thương như thế nào?</h1>
@@ -174,7 +224,6 @@ export default function HomePage() {
                                 <div style={{ fontSize: "14px" }}>
                                     Chúng tôi tin rằng hạnh phúc của mỗi gia đình đến từ việc cộng hưởng yêu thương từ hai phía. Bộ kit sẽ hỗ trợ gia đình bạn thực hiện điều đó thông qua hoạt động cung cấp kiến thức cho cả bạn và con, đồng thời tăng cường gắn kết và tương tác trong gia đình.
                                     <br /> <br />
-                                    {/* The tools work across three levels: goal-setting, recognizing patterns and making connections between the events in your life, and shifting mindsets. */}
                                 </div>
                                 <br />
                             </Grid>
@@ -189,12 +238,13 @@ export default function HomePage() {
                         </Grid>
                     </Grid>
                 </div>
-            </Grid>
-            <Grid container className={classes.section}>
+            </Grid> */}
+            {/* Quote */}
+            {/* <Grid container className={classes.section}>
                 <Grid item sm={12} md={12}>
                     <h1 className={classes.sectionHeader}>Đồng hành cùng bạn và con trong những bước đầu tiên của chuyến hành trình cuộc sống chính là sứ mệnh của chúng tôi.</h1>
                 </Grid>
-                {/* <Grid item sm={12} md={6} className={classes.sectionDescription}>
+                <Grid item sm={12} md={6} className={classes.sectionDescription}>
                     <div>
                         Picture your favorite place. What makes it special?
                         <br /> <br />
@@ -203,8 +253,8 @@ export default function HomePage() {
                         In the same way, the Whole Family Toolkit invites you to examine and acknowledge all of the dimensions of your experience — your story, your people, your hopes, your plans, and your joys.
                     </div>
                     <br />
-                </Grid> */}
-            </Grid>
+                </Grid>
+            </Grid> */}
             {/* <img src={dividerBanner2} alt="divider banner 2" style={{ width: "100%" }}></img> */}
             {/* <Grid container className={classes.section}>
                 <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
@@ -260,7 +310,7 @@ export default function HomePage() {
                     <br />
                 </Grid>
             </Grid> */}
-            <Grid container className={[classes.section, classes.banner]} style={{ alignItems: "center" }}>
+            {/* <Grid container className={[classes.section, classes.banner]} style={{ alignItems: "center" }}>
                 <Grid item sm={12} md={7} className={classes.banner}>
                     <img src={endingBanner} alt="ending banner" style={{ width: "100%" }}></img>
                 </Grid>
@@ -272,7 +322,7 @@ export default function HomePage() {
                         </Button>
                     </Link>
                 </Grid>
-            </Grid>
+            </Grid> */}
             <Footer />
             <ScrollButton />
         </div>

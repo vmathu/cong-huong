@@ -4,6 +4,27 @@ import poster from "../images/Trực tiếp/Poster.png";
 import soTinhHuong from "../images/Trực tiếp/Sổ tình huống.png";
 import theCamXuc from "../images/Trực tiếp/Thẻ cảm xúc.png";
 import troChoiTinhHuong from "../images/Trực tiếp/Trò chơi tình huống.png";
+import moRong from "../images/Trực tiếp/MR.png"; 
+import tieuChuan from "../images/Trực tiếp/TC.png"; 
+
+export const comboData = [
+    {
+        _id: "1",
+        img: tieuChuan,
+        title: "Bộ tiêu chuẩn",
+        price: "210,000 VND", 
+        description: "Dành cho 50 người đặt hàng đầu tiên", 
+        tags: ["Nhiệm vụ hàng ngày" , "Thẻ cảm xúc", "Trò chơi tình huống"]
+    },
+    {
+        _id: "2",
+        img: moRong,
+        title: "Bộ mở rộng",
+        price: "330,000 VND", 
+        description: "Dành cho 50 người đặt hàng đầu tiên", 
+        tags: ["Nhiệm vụ hàng ngày" , "Nhật ký", "Sổ hướng dẫn", "Sổ tình huống", "Thẻ cảm xúc", "Trò chơi tình huống"]
+    },
+]
 
 export const toolkitData = [
     {
