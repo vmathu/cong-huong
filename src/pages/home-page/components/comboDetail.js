@@ -102,10 +102,16 @@ const useStyles = makeStyles((theme) => ({
             background: "white",
             color: "#EFA7A7",
         },
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "12px"
+        },
     },
     price: {
         fontSize: "20px",
         fontWeight: "bold",
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "16px"
+        },
         // color: "#DC4E4E"
     }
 }))
@@ -141,11 +147,11 @@ export default function ComboDetail(props) {
                     </div>
                     <br /><br />
                     <Grid container style={{ alignItems: "center" }}>
-                        <Grid item xs={12} sm={6} className={classes.price}>
+                        <Grid item xs={6} className={classes.price}>
                             Giá: {data.price}
                         </Grid>
-                        <Grid item xs={12} sm={6} style={{ textAlign: "end" }}>
-                            <a href="https://forms.gle/i5qe6JdGWAQrb77B7" style={{ textDecoration: "none" }}>
+                        <Grid item xs={6} style={{ textAlign: "end" }}>
+                            <a href="https://forms.gle/enJAmVxbD55PHZMq6" style={{ textDecoration: "none" }}>
                                 <Button variant="constained" className={classes.button}>
                                     ĐẶT TRƯỚC NGAY
                                 </Button>

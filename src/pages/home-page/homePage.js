@@ -137,7 +137,7 @@ export default function HomePage() {
                     Hộp “Cùng con” gồm những món đồ được thiết kế chuyên biệt với từng mục đích khác nhau giúp cha mẹ có thể tiếp thu được những kiến thức nuôi dạy con hiệu quả và khoa học, đồng thời tạo cơ hội để cha mẹ và con cái có thể trở nên gắn kết hơn.
                 </h2>
                 <div style={{ margin: "4vw 0" }} >
-                    <a href="https://forms.gle/i5qe6JdGWAQrb77B7" style={{ textDecoration: "none" }}>
+                    <a href="https://forms.gle/enJAmVxbD55PHZMq6" style={{ textDecoration: "none" }}>
                         <Button variant="constained" className={classes.button2}>
                             ĐẶT TRƯỚC NGAY
                         </Button>
