@@ -1,13 +1,12 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.ff808aec.css",
-    "main.js": "/cong-huong/static/js/main.6a184424.js",
+    "main.js": "/cong-huong/static/js/main.13c2a0c3.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
     "static/media/Tcth.png": "/cong-huong/static/media/Tcth.fb08f2cf50b83d6b20c9.png",
     "static/media/Nhật ký.png": "/cong-huong/static/media/Nhật ký.693a6b239f351177a198.png",
     "static/media/MR.png": "/cong-huong/static/media/MR.8c7d27190b57e4702dc9.png",
     "static/media/TC.png": "/cong-huong/static/media/TC.c52c1850ce8017b38ba4.png",
-    "static/media/Challenge.png": "/cong-huong/static/media/Challenge.e374fcfa86325ea41751.png",
     "static/media/Illustration5.png": "/cong-huong/static/media/Illustration5.095ce926fb86b3cac345.png",
     "static/media/Illustration3.png": "/cong-huong/static/media/Illustration3.51b7d105402eb922f54d.png",
     "static/media/Poster.png": "/cong-huong/static/media/Poster.212377f28e45c3561c94.png",
@@ -18,11 +17,11 @@
     "static/media/about-hero-banner.png": "/cong-huong/static/media/about-hero-banner.a2164630cb6d01d9aca3.png",
     "index.html": "/cong-huong/index.html",
     "main.ff808aec.css.map": "/cong-huong/static/css/main.ff808aec.css.map",
-    "main.6a184424.js.map": "/cong-huong/static/js/main.6a184424.js.map",
+    "main.13c2a0c3.js.map": "/cong-huong/static/js/main.13c2a0c3.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff808aec.css",
-    "static/js/main.6a184424.js"
+    "static/js/main.13c2a0c3.js"
   ]
 }
