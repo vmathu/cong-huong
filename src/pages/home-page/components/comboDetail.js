@@ -133,7 +133,7 @@ export default function ComboDetail(props) {
                             {data.title}
                         </h1>
                         <h2 className={classes.subTitle}>
-                            Describe yourself in a way that, if someone were meeting you for the first time, they’d know the most important things about you.
+                            {data.description}
                         </h2>
                     </div>
                     <div>

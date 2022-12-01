@@ -103,7 +103,7 @@ export default function Combo(props) {
                     />
                     <CardContent className={classes.content}>
                         <Typography variant="body2" color="textSecondary" component="p" className={classes.p}>
-                            {props.description}
+                            khi đăng ký trước không cần cọc
                         </Typography>
                         <Typography gutterBottom variant="h5" component="h2" style={{ margin: 0 }} className={classes.textP}>
                             {props.sale}

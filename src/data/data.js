@@ -1,4 +1,4 @@
-import challenge from "../images/Trực tiếp/Challenge.png";
+// import challenge from "../images/Trực tiếp/Challenge.png";
 import diary from "../images/Trực tiếp/Nhật ký.png";
 import poster from "../images/Trực tiếp/Poster.png";
 import soTinhHuong from "../images/Trực tiếp/Sổ tình huống.png";
@@ -14,17 +14,17 @@ export const comboData = [
         img: tieuChuan,
         title: "Bộ tiêu chuẩn",
         price: "300,000 VND", 
-        sale: "200,000 VND", 
-        description: "khi đăng ký trước không cần cọc", 
+        sale: "210,000 VND", 
+        description: "Một bộ kit bao gồm những vật dụng thú vị, được xây dựng dựa trên các kiến thức khoa học và sự hỗ trợ từ đội ngũ chuyên gia giáo dục trẻ em đầy kinh nghiệm với mục tiêu giúp cha mẹ giáo dục con và đưa con đến tương lai đẹp nhất.", 
         tags: ["Nhiệm vụ hàng ngày" , "Thẻ cảm xúc", "Trò chơi tình huống"]
     },
     {
         _id: "2",
         img: moRong,
         title: "Bộ mở rộng",
-        price: "330,000 VND", 
-        sale: "450,000 VND", 
-        description: "khi đăng ký trước không cần cọc", 
+        price: "450,000 VND", 
+        sale: "330,000 VND", 
+        description: "Một bộ kit bao gồm những vật dụng thú vị, được xây dựng dựa trên các kiến thức khoa học và sự hỗ trợ từ đội ngũ chuyên gia giáo dục trẻ em đầy kinh nghiệm với mục tiêu giúp cha mẹ giáo dục con và đưa con đến tương lai đẹp nhất.", 
         tags: ["Nhiệm vụ hàng ngày" , "Nhật ký", "Sổ hướng dẫn", "Sổ tình huống", "Thẻ cảm xúc", "Trò chơi tình huống"]
     },
 ]
