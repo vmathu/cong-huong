@@ -130,7 +130,7 @@ export default function HomePage() {
         <div className={classes.root}>
             <NavBar current="Home" />
             {/* Banner */}
-            <div className={classes.banner} style={{ paddingBottom: "20vw" }}>
+            <div className={classes.banner} style={{ paddingBottom: "20vw", background: "linear-gradient(180deg, #F8EAEA 0%, #FFFFFF 100%)"}}>
                 <h1 className={classes.header}>
                     Cùng con khôn lớn, cộng hưởng yêu thương
                 </h1>
@@ -143,14 +143,49 @@ export default function HomePage() {
                             TÌM HIỂU THÊM
                         </Button>
                     </HashLink>
-                    <a href="#combo" style={{ textDecoration: "none" }}>
-                        <Button variant="constained" className={classes.button2}>
-                            TÌM HIỂU THÊM
-                        </Button>
-                    </a>
                 </div>
             </div>
             <img src={heroBanner} alt="hero banner" className={classes.banner} style={{ background: "none", marginTop: "-20vw" }}></img>
+            {/* How it work */}
+            <Grid container style={{ background: "#F8EAEA", }}>
+                {/* <img src={dividerBanner} alt="divider banner" className={classes.banner}></img> */}
+                <div className={classes.section}>
+                    <Grid item style={{ width: "100%" }}>
+                        <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>Cộng Hưởng Yêu Thương như thế nào?</h1>
+                    </Grid>
+                    <Grid>
+                        <Grid container style={{ justifyContent: "space-between" }}>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
+                                <div className={classes.sectionSubHeader}>Đưa con đến một tương lai đẹp nhất</div>
+                                <br />
+                                <div style={{ fontSize: "14px" }}>
+                                    Bộ kit được xây dựng dựa trên những kiến thức khoa học với sự hỗ trợ của các chuyên gia giáo dục và phát triển trẻ em. Những hoạt động xây dựng trong bộ kit sẽ giúp con bạn được lớn lên trong một môi trường giáo dục lành mạnh, hỗ trợ con bạn phát triển trên nhiều phương diện, cả về tâm lý lẫn sinh lý.
+                                    <br /> <br />
+                                    Sứ mệnh của chúng tôi chính là đồng hành cùng bạn và con trong những bước đầu tiên của chuyến hành trình cuộc sống.
+                                </div>
+                                <br />
+                            </Grid>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
+                                <div className={classes.sectionSubHeader}>Dành cho bạn và dành cho con</div>
+                                <br />
+                                <div style={{ fontSize: "14px" }}>
+                                    Chúng tôi tin rằng hạnh phúc của mỗi gia đình đến từ việc cộng hưởng yêu thương từ hai phía. Bộ kit sẽ hỗ trợ gia đình bạn thực hiện điều đó thông qua hoạt động cung cấp kiến thức cho cả bạn và con, đồng thời tăng cường gắn kết và tương tác trong gia đình.
+                                    <br /> <br />
+                                </div>
+                                <br />
+                            </Grid>
+                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
+                                <div className={classes.sectionSubHeader}>Cùng chơi, cùng học và hơn thế nữa</div>
+                                <br />
+                                <div style={{ fontSize: "14px" }}>
+                                    Hơn cả một bộ trò chơi và hơn cả một cuốn sách, bộ kit được xây dựng với những hoạt động thú vị nhưng không kém phần bổ ích với các giá trị truyền tải được gửi gắm nguyên vẹn trong từng vật phẩm. Quan trọng hơn tất cả, bộ kit chính là phương tiện để kết nối bạn và con.
+                                </div>
+                                <br />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </div>
+            </Grid>
             <Grid container className={[classes.section, classes.tools]} style={{ justifyContent: "center" }} id="combo">
                 <div className={classes.banner} style={{ background: "none" }}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
@@ -166,6 +201,7 @@ export default function HomePage() {
                                 price={combo.price}
                                 title={combo.title}
                                 description={combo.description}
+                                sale={combo.sale}
                             />
                         </Link>
                     </Grid>
@@ -206,45 +242,7 @@ export default function HomePage() {
                     </Link>
                 </Grid>
             </Grid> */}
-            {/* <Grid container style={{ background: "#F8EAEA", }}>
-                <img src={dividerBanner} alt="divider banner" className={classes.banner}></img>
-                <div className={classes.section}>
-                    <Grid item style={{ width: "100%" }}>
-                        <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>Cộng Hưởng Yêu Thương như thế nào?</h1>
-                    </Grid>
-                    <Grid>
-                        <Grid container style={{ justifyContent: "space-between" }}>
-                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Đưa con đến một tương lai đẹp nhất</div>
-                                <br />
-                                <div style={{ fontSize: "14px" }}>
-                                    Bộ kit được xây dựng dựa trên những kiến thức khoa học với sự hỗ trợ của các chuyên gia giáo dục và phát triển trẻ em. Những hoạt động xây dựng trong bộ kit sẽ giúp con bạn được lớn lên trong một môi trường giáo dục lành mạnh, hỗ trợ con bạn phát triển trên nhiều phương diện, cả về tâm lý lẫn sinh lý.
-                                    <br /> <br />
-                                    Sứ mệnh của chúng tôi chính là đồng hành cùng bạn và con trong những bước đầu tiên của chuyến hành trình cuộc sống.
-                                </div>
-                                <br />
-                            </Grid>
-                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Dành cho bạn và dành cho con</div>
-                                <br />
-                                <div style={{ fontSize: "14px" }}>
-                                    Chúng tôi tin rằng hạnh phúc của mỗi gia đình đến từ việc cộng hưởng yêu thương từ hai phía. Bộ kit sẽ hỗ trợ gia đình bạn thực hiện điều đó thông qua hoạt động cung cấp kiến thức cho cả bạn và con, đồng thời tăng cường gắn kết và tương tác trong gia đình.
-                                    <br /> <br />
-                                </div>
-                                <br />
-                            </Grid>
-                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Cùng chơi, cùng học và hơn thế nữa</div>
-                                <br />
-                                <div style={{ fontSize: "14px" }}>
-                                    Hơn cả một bộ trò chơi và hơn cả một cuốn sách, bộ kit được xây dựng với những hoạt động thú vị nhưng không kém phần bổ ích với các giá trị truyền tải được gửi gắm nguyên vẹn trong từng vật phẩm. Quan trọng hơn tất cả, bộ kit chính là phương tiện để kết nối bạn và con.
-                                </div>
-                                <br />
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </div>
-            </Grid> */}
+            
             {/* Quote */}
             {/* <Grid container className={classes.section}>
                 <Grid item sm={12} md={12}>

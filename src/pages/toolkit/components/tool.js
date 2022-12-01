@@ -93,7 +93,7 @@ export default function Tool(props) {
                         {props.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p" className={classes.p}>
-                        {props.description}
+                        {props.subTitle}
                     </Typography>
                 </CardContent>
             </CardActionArea>

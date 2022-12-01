@@ -50,12 +50,12 @@ const useStyles = makeStyles((theme) => ({
     },
     content: {
         "&:hover": {
-            opacity: 1,
+            opacity: 0.8,
             transform: "translateY(0px)",
-            // background: "black", 
+            background: "black",
             borderRadius: "15px",
         },
-        // position: "relative",
+        position: "relative",
         zIndex: 3,
         color: "white",
         opacity: 0,
@@ -64,13 +64,14 @@ const useStyles = makeStyles((theme) => ({
         height: "90%",
         display: "flex",
         flexDirection: "column-reverse",
-        textAlign: "left",
+        textAlign: "center",
+        justifyContent: "center"
     },
     p: {
         letterSpacing: "1px",
         fontSize: "15px",
         marginTop: "8px",
-        color: "black",
+        color: "white",
         [theme.breakpoints.down("sm")]: {
             fontSize: "12px"
         },
@@ -78,12 +79,12 @@ const useStyles = makeStyles((theme) => ({
     textP: {
         fontWeight: "bold",
         color: "#DC4E4E"
-    }, 
+    },
     title: {
-        padding: "2vw", 
-        textDecoration: "none", 
-        fontWeight: "500", 
-        fontSize: "20px", 
+        padding: "2vw",
+        textDecoration: "none",
+        fontWeight: "500",
+        fontSize: "20px",
         color: "#00AFE7"
     }
 }));
@@ -105,7 +106,10 @@ export default function Combo(props) {
                             {props.description}
                         </Typography>
                         <Typography gutterBottom variant="h5" component="h2" style={{ margin: 0 }} className={classes.textP}>
-                            {props.price}
+                            {props.sale}
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p" className={classes.p}>
+                            Giá bán {props.price} sẽ chỉ còn
                         </Typography>
                     </CardContent>
                 </CardActionArea>

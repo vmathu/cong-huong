@@ -43,11 +43,11 @@ function Footer() {
         },
         {
             text: 'Terms of Use',
-            link: 'https://www.ideo.org/terms-of-use',
+            // link: 'https://www.ideo.org/terms-of-use',
         },
         {
             text: 'Privacy Policy',
-            link: 'https://www.ideo.org/privacy-policy'
+            // link: 'https://www.ideo.org/privacy-policy'
         }
     ]
 

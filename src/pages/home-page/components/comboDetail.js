@@ -5,6 +5,7 @@ import Tag from "../../toolkit/components/tag";
 import Tool from "../../toolkit/components/tool";
 
 import { toolkitData } from "../../../data/data";
+import { HashLink } from "react-router-hash-link";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -140,7 +141,9 @@ export default function ComboDetail(props) {
                         <Grid container>
                             {tags.map((tag) => (
                                 <Grid item xs={12} sm={4}>
-                                    <Tag data={tag} />
+                                    <HashLink to={`#tools`} smooth style={{textDecoration: "none"}}>
+                                        <Tag data={tag} />
+                                    </HashLink>
                                 </Grid>
                             ))}
                         </Grid>
@@ -163,7 +166,7 @@ export default function ComboDetail(props) {
                     <img src={data.img} alt={data.title} className={classes.banner}></img>
                 </Grid>
             </Grid>
-            <Grid container className={[classes.section, classes.tools]}>
+            <Grid container className={[classes.section, classes.tools]} id="tools">
                 <div className={classes.banner}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
                         Chi tiết sản phẩm
@@ -176,6 +179,7 @@ export default function ComboDetail(props) {
                                 <Tool
                                     img={tool.img}
                                     title={tool.title}
+                                    subTitle={tool.subTitle}
                                     description={tool.description}
                                 />
                             </Link>

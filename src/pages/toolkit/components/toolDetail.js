@@ -1,4 +1,7 @@
 import { makeStyles, Grid } from "@material-ui/core";
+import Button from '@material-ui/core/Button';
+
+import { HashLink } from 'react-router-hash-link';
 // import Tag from "./tag";
 
 const useStyles = makeStyles((theme) => ({
@@ -17,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         fontFamily: 'Montserrat',
-        fontWeight: 500,
-        fontSize: "50px",
+        fontWeight: 600,
+        fontSize: "40px",
         textAlign: "left",
         lineHeight: "100%",
         margin: "1vw 0",
         [theme.breakpoints.down("xs")]: {
             fontSize: "30px",
-            padding: "32vw 8vw 4vw 8vw",
+            // padding: "32vw 8vw 4vw 8vw",
         },
     },
     subTitle: {
@@ -108,8 +111,8 @@ export default function ToolDetail(props) {
     // const tags = data.tags;
 
     return (
-        <div className={classes.root}> 
-            <Grid container className={classes.section}>
+        <div className={classes.root}>
+            <Grid container className={[classes.section, classes.sectionReverse]}>
                 <Grid item sm={12} md={5} style={{ alignSelf: "center", }}>
                     <div>
                         <div style={{ textAlign: "left", color: "#00AFE7", fontWeight: "bold" }}>SẢN PHẨM</div>
@@ -117,12 +120,48 @@ export default function ToolDetail(props) {
                             {data.title}
                         </h1>
                         <h2 className={classes.subTitle}>
-                            {data.description}
+                            {data.subTitle}
                         </h2>
+                        <HashLink to="#instruction" style={{ textDecoration: "none" }} smooth>
+                            <Button variant="constained" className={classes.button}>
+                                TÌM HIỂU THÊM
+                            </Button>
+                        </HashLink>
                     </div>
                 </Grid>
                 <Grid item sm={12} md={6}>
                     <img src={data.img} alt={data.title} className={classes.banner}></img>
+                </Grid>
+            </Grid>
+            <Grid container className={classes.section} id="instruction">
+                <div className={classes.banner}>
+                    <h1 className={classes.sectionHeader}>
+                        Mô tả
+                    </h1>
+                </div>
+                <Grid>
+                    <Grid container>
+                        {data.description.split(`\n\n`).map((line, index) => (
+                            <Grid container>
+                                <Grid item sm={12} md={1}>
+                                    <div style={{ textAlign: "left", color: "#00AFE7", fontWeight: "bold", fontSize: "40px" }}>
+                                        {index + 1}
+                                    </div>
+                                </Grid>
+                                <Grid item sm={12} md={11} className={classes.sectionDescription} style={{ paddingRight: "40px" }}>
+                                    <div className={classes.sectionDescription} style={{ fontFamily: "Montserrat" }}>
+                                        {line.split(`\n-`).map(
+                                            function (item, index) {
+                                                return index ?
+                                                    <li>{item}</li> :
+                                                    <p>{item}</p>
+                                            })
+                                        }
+                                    </div>
+                                </Grid>
+                            </Grid>
+                        ))}
+                    </Grid>
                 </Grid>
             </Grid>
             {/* <Grid container className={[classes.section, classes.sectionReverse]} style={{ background: "#F8EAEA" }}>
