@@ -114,6 +114,12 @@ const useStyles = makeStyles((theme) => ({
             fontSize: "16px"
         },
         // color: "#DC4E4E"
+    },
+    originPrice: {
+        fontSize: "12px",
+        fontWeight: 400,
+        color: "grey",
+        textDecoration: "line-through"
     }
 }))
 
@@ -141,7 +147,7 @@ export default function ComboDetail(props) {
                         <Grid container>
                             {tags.map((tag) => (
                                 <Grid item xs={12} sm={4}>
-                                    <HashLink to={`#tools`} smooth style={{textDecoration: "none"}}>
+                                    <HashLink to={`#tools`} smooth style={{ textDecoration: "none" }}>
                                         <Tag data={tag} />
                                     </HashLink>
                                 </Grid>
@@ -150,8 +156,12 @@ export default function ComboDetail(props) {
                     </div>
                     <br /><br />
                     <Grid container style={{ alignItems: "center" }}>
-                        <Grid item xs={6} className={classes.price}>
-                            Giá: {data.price}
+                        <Grid item xs={6} className={classes.price} style={{display: "flex", flexDirection: "row"}}>
+                            <div style={{paddingRight: "12px"}}>Giá: </div>
+                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                <div>{data.sale}</div>
+                                <div className={classes.originPrice}>{data.price}</div>
+                            </div>
                         </Grid>
                         <Grid item xs={6} style={{ textAlign: "end" }}>
                             <a href="https://forms.gle/enJAmVxbD55PHZMq6" style={{ textDecoration: "none" }}>
