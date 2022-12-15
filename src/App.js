@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename='/cong-huong'>
         <ScrollToTop />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
