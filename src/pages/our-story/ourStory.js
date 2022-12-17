@@ -114,7 +114,7 @@ export default function OurStory() {
 
     return (
         <div className={classes.root}>
-            <NavBar current="Our Story" />
+            <NavBar current="/our-story" />
             <Grid container className={classes.section}>
                 <Grid item sm={12} md={6} style={{ alignSelf: "center" }}>
                     <h1 className={classes.header}>

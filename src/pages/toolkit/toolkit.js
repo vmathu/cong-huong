@@ -135,7 +135,7 @@ export default function Toolkit() {
 
     return (
         <div className={classes.root}>
-            <NavBar current="Toolkit" />
+            <NavBar current="/toolkit" />
             {/* <div style={{ display: "flex", flexDirection: "column" }} className={classes.banner}>
                 <h1 className={classes.header}>
                     The Tools
@@ -149,7 +149,7 @@ export default function Toolkit() {
                 <Grid item sm={12} md={5}>
                     <div style={{ display: "flex", flexDirection: "column", padding: "10vw 0 0 8vw", justifyContent: "center", width: "100%"}} >
                         <h1 className={classes.header}>
-                            The Tools
+                            Bộ toolkit
                         </h1>
                         <h2 className={classes.subTitle}>
                             Một sự khởi đầu “Cùng con”

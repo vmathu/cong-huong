@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     section: {
         width: "auto",
         padding: "8vw",
-        paddingBottom: "4vw",
+        paddingBottom: 0,
         background: "white",
         justifyContent: "space-between",
         [theme.breakpoints.down("sm")]: {

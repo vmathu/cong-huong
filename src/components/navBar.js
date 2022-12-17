@@ -109,13 +109,13 @@ export default function NavBar(props) {
 
     const navItems = [
         {
-            text: 'Home',
+            text: 'Trang chủ',
             link: '/',
         },
-        // {
-        //     text: 'Toolkit',
-        //     link: '/toolkit',
-        // },
+        {
+            text: 'Bộ toolkit',
+            link: '/toolkit',
+        },
         // {
         //     text: 'Our Story',
         //     link: '/our-story'
@@ -132,7 +132,7 @@ export default function NavBar(props) {
                     <div className={classes.listItems}>
                         {navItems.map((item) => (
                             <div>
-                                {item.text === props.current ?
+                                {item.link === props.current ?
                                     <Link to={item.link} className={classes.itemsCurrent}>
                                         {item.text}
                                     </Link>
@@ -174,7 +174,7 @@ export default function NavBar(props) {
                 <List>
                     {navItems.map((item) => (
                         <ListItem button key={item.text}>
-                            {item.text === props.current ?
+                            {item.link === props.current ?
                                 <Link to={item.link} className={classes.itemsCurrent}>
                                     {item.text}
                                 </Link>

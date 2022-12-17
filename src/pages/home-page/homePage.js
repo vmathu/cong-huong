@@ -128,7 +128,7 @@ export default function HomePage() {
 
     return (
         <div className={classes.root}>
-            <NavBar current="Home" />
+            <NavBar current="/" />
             {/* Banner */}
             <div className={classes.banner} style={{ paddingBottom: "20vw", background: "linear-gradient(180deg, #F8EAEA 0%, #FFFFFF 100%)"}}>
                 <h1 className={classes.header}>
