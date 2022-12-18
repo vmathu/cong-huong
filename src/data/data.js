@@ -8,41 +8,50 @@ import moRong from "../images/Trực tiếp/MR.png";
 import tieuChuan from "../images/Trực tiếp/TC.png";
 import nhiemVuHangNgay from "../images/Trực tiếp/Nvhn.png";
 
+import t1 from "../images/theTinhHuong/1_Front.png";
+import t2 from "../images/theTinhHuong/2_Front.png"; 
+import t3 from "../images/theTinhHuong/3_Front.png";
+import t4 from "../images/theTinhHuong/4_Front.png"; 
+import t5 from "../images/theTinhHuong/5_Front.png";
+import t6 from "../images/theTinhHuong/6_Front.png"; 
+import t7 from "../images/theTinhHuong/7_Front.png";
+import t8 from "../images/theTinhHuong/8_Front.png"; 
+
 export const productsData = [
     {
         _id: "6",
         products: [
             {
-                img: diary,
-                description: "Cha mẹ sẽ dành thời gian viết những câu chuyện đồng hành cùng con (có thể đính kèm hình ảnh,...), đánh dấu sự phát triển của con về cả thể chất và tinh thần. Bênh trong quyển số sẽ bao gồm các mục gợi ý, hướng dẫn tích hợp các mục tiêu khoa học để hành trình của cha mẹ có thể được ghi chép một cách hiệu quả nhất."
+                img: t1, 
+                description: "Hôm nay vịt phải ở nhà một mình vì cha mẹ bận đi làm. Vịt con đang ngồi xem TV thì bỗng dưng có tiếng gõ cửa và một giọng nói xa lạ vang lên \"Cháu ơi cho chú vào nhà với\". Con sẽ làm gì nếu con là vịt?"
             },
             {
-                img: poster, 
-                description: "Các hướng dẫn tổng quan về những điều cần tránh, những điều nên làm và những kỹ năng trẻ nên được học dựa vào các giai đoạn phát triển của đứa trẻ"
+                img: t2, 
+                description: "Hôm nay chuột con Sún được đi chợ với mẹ. Sún vì mãi ngắm nhìn những chú cá vàng trưng bày ở một cửa hàng ven đường mà lạc mất mẹ của mình. Con sẽ làm gì nếu con là bạn Sún?"
             }, 
             {
-                img: soTinhHuong, 
-                description: "Quyển sổ với những cách tiếp cận trực tiếp, đơn giản, giúp cha mẹ có thể có một phản ứng phù hợp và hiệu quả với những tình huống khó xử thưởng gặp."
+                img: t3, 
+                description: "Hôm nay vì mãi chơi cờ cá ngựa với Đậu Đậu nên Bo chưa làm bài tập cô giáo giao. Hôm nay, cô giáo yêu cầu nộp bài tập, Bo phải làm sao?"
             }, 
             {
-                img: theCamXuc, 
-                description: "Bộ thẻ cảm xúc là một trò chơi hỗ trợ cha mẹ thấu hiểu cảm xúc, tính cách của con. Đồng thời, đây còn là công cụ hỗ trợ phát triển trí thông minh cảm xúc của trẻ thông qua hoạt động hồi tưởng."
+                img: t4, 
+                description: "Sam vẫn còn nhỏ và đang sống với ba mẹ. Một đêm nọ, Sam đang say giấc thì bỗng choàng tỉnh vì ngửi thấy mùi khói từ đâu đó. Nếu con là chú mèo con Sam, con sẽ làm gì nào?"
             }, 
             {
-                img: troChoiTinhHuong, 
-                description: "Trò chơi tình huống là công cụ hỗ trợ cha mẹ giáo dục hành vi và nhận thức của con một cách thú vị thông qua hoạt động game."
+                img: t5, 
+                description: "Hôm nay heo con Tồ được mẹ tặng một con khủng long đồ chơi rất đẹp. Heo con mang lên trường để khoe với bạn bè, nhưng thực không may Simon đã giành đồ chơi của heo con mất tiêu :<"
             }, 
             {
-                img: moRong, 
-                description: "Một bộ kit bao gồm những vật dụng thú vị, được xây dựng dựa trên các kiến thức khoa học và sự hỗ trợ từ đội ngũ chuyên gia giáo dục trẻ em đầy kinh nghiệm với mục tiêu giúp cha mẹ giáo dục con và đưa con đến tương lai đẹp nhất."
+                img: t6, 
+                description: "Heo con Tồ đang trên đường về nhà thì gặp một chú gấu xám. Gấu xám nói: \"Chú có kẹo, con đi theo chú nha\". Con nghĩ heo con Tồ nên làm gì?"
             }, 
             {
-                img: tieuChuan, 
-                description: "Một bộ kit bao gồm những vật dụng thú vị, được xây dựng dựa trên các kiến thức khoa học và sự hỗ trợ từ đội ngũ chuyên gia giáo dục trẻ em đầy kinh nghiệm với mục tiêu giúp cha mẹ giáo dục con và đưa con đến tương lai đẹp nhất."
+                img: t7, 
+                description: "Chú chuột con Sún rất thích chiếc tên lửa đồ chơi mới của mèo nhỏ Sam nên đã mượn về nhà chơi ít hôm. Tuy nhiên Sún đã vô tình làm mất chiếc xe đồ chơi đó mất rồi. Nếu con là mèo Sam nhỏ, con sẽ làm gì?"
             }, 
             {
-                img: nhiemVuHangNgay, 
-                description: "Bộ nhiệm vụ hàng ngày bao gồm 35 thẻ nhiệm vụ gợi ý các hoạt động đơn giản để cha mẹ và con có thể dễ dàng thực hiện mà không cần chuẩn bị trước hay mất quá nhiều thời gian trong ngày."
+                img: t8, 
+                description: "Hôm nay trên đường cu Bin đi đến trường, một người đàn ông lạ mặt xuất hiện rồi đột nhiên tiếp xúc cơ thể với cu Bin. Điều này làm Bin cảm thấy rất khó chịu. Nếu con là cu Bin, con sẽ làm gì?"
             }
         ]
     }
