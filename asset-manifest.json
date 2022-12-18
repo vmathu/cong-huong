@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cong-huong/static/css/main.ff808aec.css",
-    "main.js": "/cong-huong/static/js/main.a6f72d89.js",
+    "main.js": "/cong-huong/static/js/main.c47fd73b.js",
     "static/js/787.08bd08ab.chunk.js": "/cong-huong/static/js/787.08bd08ab.chunk.js",
     "static/media/Tcth.png": "/cong-huong/static/media/Tcth.fb08f2cf50b83d6b20c9.png",
     "static/media/Nhật ký.png": "/cong-huong/static/media/Nhật ký.693a6b239f351177a198.png",
@@ -10,18 +10,26 @@
     "static/media/Illustration5.png": "/cong-huong/static/media/Illustration5.095ce926fb86b3cac345.png",
     "static/media/Illustration3.png": "/cong-huong/static/media/Illustration3.51b7d105402eb922f54d.png",
     "static/media/Poster.png": "/cong-huong/static/media/Poster.212377f28e45c3561c94.png",
+    "static/media/4_Front.png": "/cong-huong/static/media/4_Front.8009a9b3c4553d825597.png",
+    "static/media/8_Front.png": "/cong-huong/static/media/8_Front.acccc18cbff386ff3793.png",
     "static/media/Nvhn.png": "/cong-huong/static/media/Nvhn.c6eb266fe6bdef91c3f7.png",
+    "static/media/1_Front.png": "/cong-huong/static/media/1_Front.1ab70445d204ec28f1f7.png",
+    "static/media/3_Front.png": "/cong-huong/static/media/3_Front.d61f5d45594b28abb206.png",
+    "static/media/5_Front.png": "/cong-huong/static/media/5_Front.27f7f6c5f03308f28560.png",
+    "static/media/6_Front.png": "/cong-huong/static/media/6_Front.30013b53de9ba618276a.png",
     "static/media/Sổ tình huống.png": "/cong-huong/static/media/Sổ tình huống.02b2442a9307c559718f.png",
     "static/media/Tcx.png": "/cong-huong/static/media/Tcx.421bfd7a0934e8ee3864.png",
+    "static/media/2_Front.png": "/cong-huong/static/media/2_Front.ab1e2475c64d3c605a70.png",
     "static/media/about-image.png": "/cong-huong/static/media/about-image.65e17a2971570cecc9f2.png",
     "static/media/about-hero-banner.png": "/cong-huong/static/media/about-hero-banner.a2164630cb6d01d9aca3.png",
+    "static/media/7_Front.png": "/cong-huong/static/media/7_Front.f7515c26408fa8d46740.png",
     "index.html": "/cong-huong/index.html",
     "main.ff808aec.css.map": "/cong-huong/static/css/main.ff808aec.css.map",
-    "main.a6f72d89.js.map": "/cong-huong/static/js/main.a6f72d89.js.map",
+    "main.c47fd73b.js.map": "/cong-huong/static/js/main.c47fd73b.js.map",
     "787.08bd08ab.chunk.js.map": "/cong-huong/static/js/787.08bd08ab.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff808aec.css",
-    "static/js/main.a6f72d89.js"
+    "static/js/main.c47fd73b.js"
   ]
 }
