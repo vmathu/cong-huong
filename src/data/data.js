@@ -70,7 +70,7 @@ export const comboData = [
     {
         _id: "2",
         img: moRong,
-        title: "Bộ mở rộng",
+        title: "Bộ cùng con",
         price: "450,000 VND",
         sale: "330,000 VND",
         description: "Một bộ kit bao gồm những vật dụng thú vị, được xây dựng dựa trên các kiến thức khoa học và sự hỗ trợ từ đội ngũ chuyên gia giáo dục trẻ em đầy kinh nghiệm với mục tiêu giúp cha mẹ giáo dục con và đưa con đến tương lai đẹp nhất.",

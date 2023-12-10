@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 // import endingBanner from "../../images/Illustration3.png";
@@ -12,12 +12,14 @@ import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
 import ScrollButton from "../../components/scrollBtn";
 
-import { comboData } from "../../data/data";
+// import { comboData } from "../../data/data";
 
-import Combo from "./components/combo";
+// import Combo from "./components/combo";
 import ComboDetail from "./components/comboDetail";
 
 import tieuChuan from "../../images/Trực tiếp/TC.png";
+
+import { Widget } from "@typeform/embed-react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -170,15 +172,13 @@ export default function HomePage() {
           dạy con hiệu quả và khoa học, đồng thời tạo cơ hội để cha mẹ và con
           cái có thể trở nên gắn kết hơn.
         </h2>
-        <div style={{ margin: "4vw 0" }}>
-          <HashLink
-            to="/#combo-detail"
-            className={classes.buttonContainer}
-            smooth
-          >
+        <div style={{ margin: "4vw 0" }} className={classes.buttonContainer}>
+          <HashLink to="/#nasCeVzK" smooth>
             <Button variant="constained" className={classes.button2}>
               ĐẶT TRƯỚC BỘ LÀM QUEN
             </Button>
+          </HashLink>
+          <HashLink to="/#MR9IFb2Z" smooth>
             <Button variant="constained" className={classes.button2}>
               CHIA SẺ CÂU CHUYỆN
             </Button>
@@ -301,36 +301,35 @@ export default function HomePage() {
           </div>
         </Grid>
       </Grid>
-      <Grid
-        container
-        className={[classes.section, classes.tools]}
-        style={{ justifyContent: "center" }}
-        id="combo"
-      >
-        <div className={classes.banner} style={{ background: "none" }}>
-          <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
-            Bộ sản phẩm Cùng Con
-          </h1>
-          <h2 className={classes.sectionSubHeader}>
-            Dự kiến ra mắt vào tháng 2/ 2023
-          </h2>
-        </div>
-        {comboData.map((combo) => (
-          <Grid item xs={12} sm={6} md={4} style={{ paddingRight: "8px" }}>
-            <Link
-              to={`/combo-detail/${combo._id}`}
-              style={{ textDecoration: "none", textAlign: "-webkit-center" }}
+      <div id="nasCeVzK"></div>
+      <Widget
+        id="nasCeVzK"
+        style={{ padding: "8vw", height: "800px" }}
+        className="my-form"
+      />
+      {/* / */}
+      <Grid container style={{ background: "#F8EAEA" }}>
+        {/* <img src={dividerBanner} alt="divider banner" className={classes.banner}></img> */}
+        <div className={classes.section} style={{ width: "100%" }}>
+          <Grid item style={{ width: "100%" }}>
+            <h1
+              className={classes.sectionHeader}
+              style={{ textAlign: "center" }}
             >
-              <Combo
-                img={combo.img}
-                price={combo.price}
-                title={combo.title}
-                description={combo.description}
-                sale={combo.sale}
-              />
-            </Link>
+              NHẬN NGAY BỘ KIT 135 TẤM THẺ TRỊ GIÁ LÊN ĐẾN 250.000VNĐ!
+            </h1>
           </Grid>
-        ))}
+          <Grid>
+            <Grid container style={{ justifyContent: "space-between" }}>
+              <div id="MR9IFb2Z"></div>
+              <Widget
+                id="MR9IFb2Z"
+                style={{ height: "1000px", width: "100%" }}
+                className="my-form"
+              />
+            </Grid>
+          </Grid>
+        </div>
       </Grid>
       {/* Who are we */}
       {/* <Grid container className={classes.section}>

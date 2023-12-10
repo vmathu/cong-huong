@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -7,11 +7,11 @@ import { Link } from "react-router-dom";
 import HomePage from "./pages/home-page/homePage";
 import Toolkit from "./pages/toolkit/toolkit";
 import OurStory from "./pages/our-story/ourStory";
-import ToolDetailPage from './pages/toolkit/toolDetailPage';
+import ToolDetailPage from "./pages/toolkit/toolDetailPage";
 
-import ScrollToTop from './components/scrollToTop';
-import { comboData, toolkitData } from './data/data';
-import ComboDetailPage from './pages/home-page/comboDetailPage';
+import ScrollToTop from "./components/scrollToTop";
+import { comboData, toolkitData } from "./data/data";
+import ComboDetailPage from "./pages/home-page/comboDetailPage";
 
 function App() {
   const [toolId, setToolId] = React.useState([]);
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router basename='/cong-huong'>
+      <Router basename="/cong-huong">
         <ScrollToTop />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
@@ -61,21 +61,13 @@ function App() {
           <Link to={`tool-detail/${id}`} />
         ))}
         <Routes>
-          <Route
-            exact
-            path="/tool-detail/:id"
-            element={<ToolDetailPage />}
-          />
+          <Route exact path="/tool-detail/:id" element={<ToolDetailPage />} />
         </Routes>
         {comboId.map((id) => (
           <Link to={`combo-detail/${id}`} />
         ))}
         <Routes>
-          <Route
-            exact
-            path="/combo-detail/:id"
-            element={<ComboDetailPage />}
-          />
+          <Route exact path="/combo-detail/:id" element={<ComboDetailPage />} />
         </Routes>
       </Router>
     </div>
