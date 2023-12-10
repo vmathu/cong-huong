@@ -152,9 +152,7 @@ export default function ToolDetail(props) {
                                     <div className={classes.sectionDescription} style={{ fontFamily: "Montserrat" }}>
                                         {line.split(`\n-`).map(
                                             function (item, index) {
-                                                return index ?
-                                                    <li>{item}</li> :
-                                                    <p>{item}</p>
+                                                return {item}
                                             })
                                         }
                                     </div>

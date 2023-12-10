@@ -1,9 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 // import endingBanner from "../../images/Illustration3.png";
 import heroBanner from "../../images/Illustration5.png";
@@ -15,200 +15,325 @@ import ScrollButton from "../../components/scrollBtn";
 import { comboData } from "../../data/data";
 
 import Combo from "./components/combo";
+import ComboDetail from "./components/comboDetail";
+
+import tieuChuan from "../../images/Trực tiếp/TC.png";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        padding: 0,
-        margin: 0,
-        width: "100%",
-        fontFamily: "Livvic",
-        color: "#454016"
+  root: {
+    padding: 0,
+    margin: 0,
+    width: "100%",
+    fontFamily: "Livvic",
+    color: "#454016",
+  },
+  banner: {
+    width: "100%",
+    background: "#F8EAEA",
+  },
+  header: {
+    color: "#00AFE7",
+    fontFamily: "Montserrat",
+    fontWeight: 600,
+    fontSize: "70px",
+    lineHeight: "100%",
+    textAlign: "center",
+    padding: "8vw 17vw",
+    paddingBottom: 0,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "30px",
+      padding: "32vw 8vw 4vw 8vw",
     },
-    banner: {
-        width: "100%",
-        background: "#F8EAEA",
+  },
+  subTitle: {
+    fontFamily: "Livvic",
+    fontWeight: 400,
+    fontSize: "20px",
+    lineHeight: "150%",
+    padding: "0 24vw",
+    marginBottom: 0,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "16px",
+      padding: "0 8vw",
     },
-    header: {
-        color: "#00AFE7",
-        fontFamily: 'Montserrat',
-        fontWeight: 600,
-        fontSize: "70px",
-        lineHeight: "100%",
-        textAlign: "center",
-        padding: "8vw 17vw",
-        paddingBottom: 0,
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "30px",
-            padding: "32vw 8vw 4vw 8vw",
-        },
+  },
+  section: {
+    width: "auto",
+    padding: "8vw",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "left",
     },
-    subTitle: {
-        fontFamily: 'Livvic',
-        fontWeight: 400,
-        fontSize: '20px',
-        lineHeight: "150%",
-        padding: "0 24vw",
-        marginBottom: 0,
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "16px",
-            padding: "0 8vw"
-        },
+  },
+  sectionHeader: {
+    color: "#00AFE7",
+    fontFamily: "Montserrat",
+    fontWeight: 500,
+    fontSize: "40px",
+    lineHeight: "120%",
+    textAlign: "left",
+    marginTop: 0,
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
     },
-    section: {
-        width: "auto",
-        padding: "8vw",
-        justifyContent: "space-between",
-        [theme.breakpoints.down("sm")]: {
-            justifyContent: "left"
-        },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "28px",
     },
-    sectionHeader: {
-        color: "#00AFE7",
-        fontFamily: 'Montserrat',
-        fontWeight: 500,
-        fontSize: "40px",
-        lineHeight: "120%",
-        textAlign: "left",
-        marginTop: 0,
-        [theme.breakpoints.down("sm")]: {
-            textAlign: "center",
-        },
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "28px"
-        },
+  },
+  sectionSubHeader: {
+    fontSize: "24px",
+    fontWeight: "500",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "20px",
     },
-    sectionSubHeader: {
-        fontSize: "24px",
-        fontWeight: "500",
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "20px"
-        },
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "16px"
-        },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "16px",
     },
-    sectionDescription: {
-        textAlign: "left",
-        fontSize: "20px",
-        width: '100%',
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "16px",
-        },
+  },
+  sectionDescription: {
+    textAlign: "left",
+    fontSize: "20px",
+    width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "16px",
     },
-    button: {
-        background: "#F8EAEA",
-        padding: '15px 30px',
-        fontSize: '16px',
-        color: "#EFA7A7",
-        "&:hover": {
-            background: "#EFA7A7",
-            color: "#F8EAEA"
-        }
+  },
+  button: {
+    background: "#F8EAEA",
+    padding: "15px 30px",
+    fontSize: "16px",
+    color: "#EFA7A7",
+    "&:hover": {
+      background: "#EFA7A7",
+      color: "#F8EAEA",
     },
-    button2: {
-        background: "#EFA7A7",
-        color: "#F8EAEA",
-        padding: '15px 30px',
-        fontSize: '16px',
-        "&:hover": {
-            background: "white",
-            color: "#EFA7A7",
-        }
+  },
+  button2: {
+    background: "#EFA7A7",
+    color: "#F8EAEA",
+    padding: "15px 30px",
+    fontSize: "16px",
+    "&:hover": {
+      background: "white",
+      color: "#EFA7A7",
     },
-    gridResponsive: {
-        textAlign: "left",
-        [theme.breakpoints.down("sm")]: {
-            textAlign: "center"
-        },
-    }
-}))
+  },
+  gridResponsive: {
+    textAlign: "left",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  buttonContainer: {
+    textDecoration: "none",
+    display: "flex",
+    justifyContent: "center",
+    gap: "20px",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      margin: "0 16px",
+    },
+  },
+}));
 
 export default function HomePage() {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <div className={classes.root}>
-            <NavBar current="/" />
-            {/* Banner */}
-            <div className={classes.banner} style={{ paddingBottom: "20vw", background: "linear-gradient(180deg, #F8EAEA 0%, #FFFFFF 100%)"}}>
-                <h1 className={classes.header}>
-                    Cùng con khôn lớn, cộng hưởng yêu thương
-                </h1>
-                <h2 className={classes.subTitle}>
-                    Hộp “Cùng con” gồm những món đồ được thiết kế chuyên biệt với từng mục đích khác nhau giúp cha mẹ có thể tiếp thu được những kiến thức nuôi dạy con hiệu quả và khoa học, đồng thời tạo cơ hội để cha mẹ và con cái có thể trở nên gắn kết hơn.
-                </h2>
-                <div style={{ margin: "4vw 0" }} >
-                    <HashLink to="/#combo" style={{ textDecoration: "none" }} smooth>
-                        <Button variant="constained" className={classes.button2}>
-                            TÌM HIỂU THÊM
-                        </Button>
-                    </HashLink>
+  const tmpData = {
+    _id: "0",
+    img: tieuChuan,
+    title: "Cùng con",
+    price: "300,000 VND",
+    sale: "210,000 VND",
+    description:
+      "Một bộ kit bao gồm những vật dụng thú vị, được xây dựng dựa trên các kiến thức khoa học và sự hỗ trợ từ đội ngũ chuyên gia giáo dục trẻ em đầy kinh nghiệm với mục tiêu giúp cha mẹ giáo dục con và đưa con đến tương lai đẹp nhất.",
+    tags: ["Nhiệm vụ hàng ngày", "Thẻ cảm xúc", "Trò chơi tình huống"],
+  };
+
+  return (
+    <div className={classes.root}>
+      <NavBar current="/" />
+      {/* Banner */}
+      <div
+        className={classes.banner}
+        style={{
+          paddingBottom: "20vw",
+          background: "linear-gradient(180deg, #F8EAEA 0%, #FFFFFF 100%)",
+        }}
+      >
+        <h1 className={classes.header}>
+          Cùng con khôn lớn, cộng hưởng yêu thương
+        </h1>
+        <h2 className={classes.subTitle}>
+          Hộp “Cùng con” gồm những món đồ được thiết kế chuyên biệt với từng mục
+          đích khác nhau giúp cha mẹ có thể tiếp thu được những kiến thức nuôi
+          dạy con hiệu quả và khoa học, đồng thời tạo cơ hội để cha mẹ và con
+          cái có thể trở nên gắn kết hơn.
+        </h2>
+        <div style={{ margin: "4vw 0" }}>
+          <HashLink
+            to="/#combo-detail"
+            className={classes.buttonContainer}
+            smooth
+          >
+            <Button variant="constained" className={classes.button2}>
+              ĐẶT TRƯỚC BỘ LÀM QUEN
+            </Button>
+            <Button variant="constained" className={classes.button2}>
+              CHIA SẺ CÂU CHUYỆN
+            </Button>
+          </HashLink>
+        </div>
+      </div>
+      <img
+        src={heroBanner}
+        alt="hero banner"
+        className={classes.banner}
+        style={{ background: "none", marginTop: "-20vw" }}
+      ></img>
+      {/* How it work */}
+      <Grid container style={{ background: "#F8EAEA" }}>
+        {/* <img src={dividerBanner} alt="divider banner" className={classes.banner}></img> */}
+        <div className={classes.section}>
+          <Grid item style={{ width: "100%" }}>
+            <h1
+              className={classes.sectionHeader}
+              style={{ textAlign: "center" }}
+            >
+              Cộng Hưởng Yêu Thương như thế nào?
+            </h1>
+          </Grid>
+          <Grid>
+            <Grid container style={{ justifyContent: "space-between" }}>
+              <Grid
+                item
+                xs={12}
+                sm={4}
+                className={classes.sectionDescription}
+                style={{ paddingRight: "20px" }}
+              >
+                <div className={classes.sectionSubHeader}>
+                  Đưa con đến một tương lai đẹp nhất
                 </div>
-            </div>
-            <img src={heroBanner} alt="hero banner" className={classes.banner} style={{ background: "none", marginTop: "-20vw" }}></img>
-            {/* How it work */}
-            <Grid container style={{ background: "#F8EAEA", }}>
-                {/* <img src={dividerBanner} alt="divider banner" className={classes.banner}></img> */}
-                <div className={classes.section}>
-                    <Grid item style={{ width: "100%" }}>
-                        <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>Cộng Hưởng Yêu Thương như thế nào?</h1>
-                    </Grid>
-                    <Grid>
-                        <Grid container style={{ justifyContent: "space-between" }}>
-                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Đưa con đến một tương lai đẹp nhất</div>
-                                <br />
-                                <div style={{ fontSize: "14px" }}>
-                                    Bộ kit được xây dựng dựa trên những kiến thức khoa học với sự hỗ trợ của các chuyên gia giáo dục và phát triển trẻ em. Những hoạt động xây dựng trong bộ kit sẽ giúp con bạn được lớn lên trong một môi trường giáo dục lành mạnh, hỗ trợ con bạn phát triển trên nhiều phương diện, cả về tâm lý lẫn sinh lý.
-                                    <br /> <br />
-                                    Sứ mệnh của chúng tôi chính là đồng hành cùng bạn và con trong những bước đầu tiên của chuyến hành trình cuộc sống.
-                                </div>
-                                <br />
-                            </Grid>
-                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Dành cho bạn và dành cho con</div>
-                                <br />
-                                <div style={{ fontSize: "14px" }}>
-                                    Chúng tôi tin rằng hạnh phúc của mỗi gia đình đến từ việc cộng hưởng yêu thương từ hai phía. Bộ kit sẽ hỗ trợ gia đình bạn thực hiện điều đó thông qua hoạt động cung cấp kiến thức cho cả bạn và con, đồng thời tăng cường gắn kết và tương tác trong gia đình.
-                                    <br /> <br />
-                                </div>
-                                <br />
-                            </Grid>
-                            <Grid item xs={12} sm={4} className={classes.sectionDescription} style={{ paddingRight: "20px" }}>
-                                <div className={classes.sectionSubHeader}>Cùng chơi, cùng học và hơn thế nữa</div>
-                                <br />
-                                <div style={{ fontSize: "14px" }}>
-                                    Hơn cả một bộ trò chơi và hơn cả một cuốn sách, bộ kit được xây dựng với những hoạt động thú vị nhưng không kém phần bổ ích với các giá trị truyền tải được gửi gắm nguyên vẹn trong từng vật phẩm. Quan trọng hơn tất cả, bộ kit chính là phương tiện để kết nối bạn và con.
-                                </div>
-                                <br />
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                <br />
+                <div style={{ fontSize: "14px" }}>
+                  Bộ kit được xây dựng dựa trên những kiến thức khoa học với sự
+                  hỗ trợ của các chuyên gia giáo dục và phát triển trẻ em. Những
+                  hoạt động xây dựng trong bộ kit sẽ giúp con bạn được lớn lên
+                  trong một môi trường giáo dục lành mạnh, hỗ trợ con bạn phát
+                  triển trên nhiều phương diện, cả về tâm lý lẫn sinh lý.
+                  <br /> <br />
+                  Sứ mệnh của chúng tôi chính là đồng hành cùng bạn và con trong
+                  những bước đầu tiên của chuyến hành trình cuộc sống.
                 </div>
+                <br />
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={4}
+                className={classes.sectionDescription}
+                style={{ paddingRight: "20px" }}
+              >
+                <div className={classes.sectionSubHeader}>
+                  Dành cho bạn và dành cho con
+                </div>
+                <br />
+                <div style={{ fontSize: "14px" }}>
+                  Chúng tôi tin rằng hạnh phúc của mỗi gia đình đến từ việc cộng
+                  hưởng yêu thương từ hai phía. Bộ kit sẽ hỗ trợ gia đình bạn
+                  thực hiện điều đó thông qua hoạt động cung cấp kiến thức cho
+                  cả bạn và con, đồng thời tăng cường gắn kết và tương tác trong
+                  gia đình.
+                  <br /> <br />
+                </div>
+                <br />
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={4}
+                className={classes.sectionDescription}
+                style={{ paddingRight: "20px" }}
+              >
+                <div className={classes.sectionSubHeader}>
+                  Cùng chơi, cùng học và hơn thế nữa
+                </div>
+                <br />
+                <div style={{ fontSize: "14px" }}>
+                  Hơn cả một bộ trò chơi và hơn cả một cuốn sách, bộ kit được
+                  xây dựng với những hoạt động thú vị nhưng không kém phần bổ
+                  ích với các giá trị truyền tải được gửi gắm nguyên vẹn trong
+                  từng vật phẩm. Quan trọng hơn tất cả, bộ kit chính là phương
+                  tiện để kết nối bạn và con.
+                </div>
+                <br />
+              </Grid>
             </Grid>
-            <Grid container className={[classes.section, classes.tools]} style={{ justifyContent: "center" }} id="combo">
-                <div className={classes.banner} style={{ background: "none" }}>
-                    <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
-                        Bộ sản phẩm Cùng Con
-                    </h1>
-                    <h2 className={classes.sectionSubHeader}>Dự kiến ra mắt vào tháng 2/ 2023</h2>
-                </div>
-                {comboData.map((combo) => (
-                    <Grid item xs={12} sm={6} md={4} style={{ paddingRight: "8px" }}>
-                        <Link to={`/combo-detail/${combo._id}`} style={{ textDecoration: "none", textAlign: "-webkit-center" }}>
-                            <Combo
-                                img={combo.img}
-                                price={combo.price}
-                                title={combo.title}
-                                description={combo.description}
-                                sale={combo.sale}
-                            />
-                        </Link>
-                    </Grid>
-                ))}
-            </Grid>
-            {/* Who are we */}
-            {/* <Grid container className={classes.section}>
+          </Grid>
+        </div>
+      </Grid>
+      <Grid container id="combo-detail">
+        <ComboDetail data={tmpData} />
+      </Grid>
+      <Grid container className={classes.section} style={{ paddingBottom: 0 }}>
+        <Grid item sm={12} md={5}>
+          <h1 className={classes.sectionHeader}>
+            Bộ Cùng con nay đã có phiên bản “Làm quen”
+          </h1>
+        </Grid>
+        <Grid
+          item
+          sm={12}
+          md={6}
+          className={[classes.sectionDescription, classes.gridResponsive]}
+        >
+          <div>
+            Bộ Làm quen bao gồm:
+            <ul>
+              <li>14 Thẻ nhiệm vụ hằng ngày. </li>
+              <li>
+                Bộ đồ chơi Quỷ nhỏ và Tinh nghịch bao gồm: 10 Thẻ Tình huống, 5
+                Thẻ Nhiệm vụ Ba mẹ và 5 Thẻ thưởng.
+              </li>
+              <li>6 thẻ cảm xúc. </li>
+            </ul>
+          </div>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        className={[classes.section, classes.tools]}
+        style={{ justifyContent: "center" }}
+        id="combo"
+      >
+        <div className={classes.banner} style={{ background: "none" }}>
+          <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
+            Bộ sản phẩm Cùng Con
+          </h1>
+          <h2 className={classes.sectionSubHeader}>
+            Dự kiến ra mắt vào tháng 2/ 2023
+          </h2>
+        </div>
+        {comboData.map((combo) => (
+          <Grid item xs={12} sm={6} md={4} style={{ paddingRight: "8px" }}>
+            <Link
+              to={`/combo-detail/${combo._id}`}
+              style={{ textDecoration: "none", textAlign: "-webkit-center" }}
+            >
+              <Combo
+                img={combo.img}
+                price={combo.price}
+                title={combo.title}
+                description={combo.description}
+                sale={combo.sale}
+              />
+            </Link>
+          </Grid>
+        ))}
+      </Grid>
+      {/* Who are we */}
+      {/* <Grid container className={classes.section}>
                 <Grid item sm={12} md={5}>
                     <h1 className={classes.sectionHeader}>
                         Hộp “Cùng con” giúp cha mẹ nuôi dạy và phát triển con trẻ  hiệu quả và khoa học
@@ -242,9 +367,9 @@ export default function HomePage() {
                     </Link>
                 </Grid>
             </Grid> */}
-            
-            {/* Quote */}
-            {/* <Grid container className={classes.section}>
+
+      {/* Quote */}
+      {/* <Grid container className={classes.section}>
                 <Grid item sm={12} md={12}>
                     <h1 className={classes.sectionHeader}>Đồng hành cùng bạn và con trong những bước đầu tiên của chuyến hành trình cuộc sống chính là sứ mệnh của chúng tôi.</h1>
                 </Grid>
@@ -259,8 +384,8 @@ export default function HomePage() {
                     <br />
                 </Grid>
             </Grid> */}
-            {/* <img src={dividerBanner2} alt="divider banner 2" style={{ width: "100%" }}></img> */}
-            {/* <Grid container className={classes.section}>
+      {/* <img src={dividerBanner2} alt="divider banner 2" style={{ width: "100%" }}></img> */}
+      {/* <Grid container className={classes.section}>
                 <Grid item xs={12} sm={4} md={2} className={classes.sectionDescription}>
                     <div className={classes.sectionSubHeader}>Your Story</div>
                     <br />
@@ -314,7 +439,7 @@ export default function HomePage() {
                     <br />
                 </Grid>
             </Grid> */}
-            {/* <Grid container className={[classes.section, classes.banner]} style={{ alignItems: "center" }}>
+      {/* <Grid container className={[classes.section, classes.banner]} style={{ alignItems: "center" }}>
                 <Grid item sm={12} md={7} className={classes.banner}>
                     <img src={endingBanner} alt="ending banner" style={{ width: "100%" }}></img>
                 </Grid>
@@ -327,8 +452,8 @@ export default function HomePage() {
                     </Link>
                 </Grid>
             </Grid> */}
-            <Footer />
-            <ScrollButton />
-        </div>
-    );
+      <Footer />
+      <ScrollButton />
+    </div>
+  );
 }

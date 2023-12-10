@@ -16,127 +16,128 @@ import toolkitBanner from "../../images/Illustration3.png";
 import { toolkitData } from "../../data/data";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        padding: 0,
-        margin: 0,
-        width: "100%",
-        fontFamily: "Livvic",
-        color: "#454016",
-        textAlign: "left",
-        background: "#F8EAEA",
+  root: {
+    padding: 0,
+    margin: 0,
+    width: "100%",
+    fontFamily: "Livvic",
+    color: "#454016",
+    textAlign: "left",
+    background: "#F8EAEA",
+  },
+  heroBanner: {
+    marginTop: "-8vw",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 0,
     },
-    heroBanner: {
-        marginTop: "-8vw",
-        [theme.breakpoints.down("sm")]: {
-            marginTop: 0
-        },
-        [theme.breakpoints.down("xs")]: {
-            marginTop: "8vw"
-        },
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "8vw",
     },
-    banner: {
-        width: "100%",
-        textAlign: "left", 
+  },
+  banner: {
+    width: "100%",
+    textAlign: "left",
+  },
+  bannerResponsive: {
+    [theme.breakpoints.up("lg")]: {
+      margin: "10vw 12vw 0",
+      width: "fit-content",
     },
-    bannerResponsive: {
-        [theme.breakpoints.up("lg")]: {
-            margin: "10vw 12vw 0", width: "fit-content"
-        },
+  },
+  header: {
+    color: "#00AFE7",
+    fontFamily: "Montserrat",
+    fontWeight: 600,
+    fontSize: "90px",
+    textAlign: "left",
+    lineHeight: "100%",
+    margin: 0,
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
     },
-    header: {
-        color: "#00AFE7",
-        fontFamily: 'Montserrat',
-        fontWeight: 600,
-        fontSize: "90px",
-        textAlign: "left",
-        lineHeight: "100%",
-        margin: 0, 
-        [theme.breakpoints.down("sm")]: {
-            textAlign: "center",
-        },
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "30px",
-            padding: "16vw 8vw 4vw 8vw",
-        },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "30px",
+      padding: "16vw 8vw 4vw 8vw",
     },
-    subTitle: {
-        fontFamily: 'Livvic',
-        fontWeight: 400,
-        fontSize: '20px',
-        lineHeight: "150%",
-        margin: "2vw 0 0 0",
-        textAlign: "left",
-        [theme.breakpoints.down("sm")]: {
-            textAlign: "center",
-            padding: '0 17vw'
-        },
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "16px",
-            padding: "0 8vw"
-        },
+  },
+  subTitle: {
+    fontFamily: "Livvic",
+    fontWeight: 400,
+    fontSize: "20px",
+    lineHeight: "150%",
+    margin: "2vw 0 0 0",
+    textAlign: "left",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      padding: "0 17vw",
     },
-    section: {
-        width: "auto",
-        padding: "8vw",
-        background: "white",
-        justifyContent: "space-between",
-        marginTop: "-4px",
-        [theme.breakpoints.down("sm")]: {
-            justifyContent: "left"
-        },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "16px",
+      padding: "0 8vw",
     },
-    sectionHeader: {
-        color: "#00AFE7",
-        fontFamily: 'Montserrat',
-        fontWeight: 500,
-        fontSize: "50px",
-        lineHeight: "120%",
-        textAlign: "left",
-        marginTop: 0,
-        [theme.breakpoints.down("sm")]: {
-            textAlign: "center",
-        },
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "28px"
-        },
+  },
+  section: {
+    width: "auto",
+    padding: "8vw",
+    background: "white",
+    justifyContent: "space-between",
+    marginTop: "-4px",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "left",
     },
-    sectionSubHeader: {
-        fontSize: "24px",
-        fontWeight: "500",
-        [theme.breakpoints.down("sm")]: {
-            textAlign: "left",
-        },
+  },
+  sectionHeader: {
+    color: "#00AFE7",
+    fontFamily: "Montserrat",
+    fontWeight: 500,
+    fontSize: "50px",
+    lineHeight: "120%",
+    textAlign: "left",
+    marginTop: 0,
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
     },
-    sectionDescription: {
-        textAlign: "left",
-        fontSize: "20px",
-        lineHeight: "150%",
-        width: '100%',
-        [theme.breakpoints.down("xs")]: {
-            fontSize: "16px",
-        },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "28px",
     },
-    gridResponsive: {
-        textAlign: "left",
-        [theme.breakpoints.down("sm")]: {
-            textAlign: "center"
-        },
+  },
+  sectionSubHeader: {
+    fontSize: "24px",
+    fontWeight: "500",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "left",
     },
-    tools: {
-        justifyContent: "flex-start",
+  },
+  sectionDescription: {
+    textAlign: "left",
+    fontSize: "20px",
+    lineHeight: "150%",
+    width: "100%",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "16px",
     },
-    tool: {
-        padding: "8px",
-    }
-}))
+  },
+  gridResponsive: {
+    textAlign: "left",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+  tools: {
+    justifyContent: "flex-start",
+  },
+  tool: {
+    padding: "8px",
+  },
+}));
 
 export default function Toolkit() {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <div className={classes.root}>
-            <NavBar current="/toolkit" />
-            {/* <div style={{ display: "flex", flexDirection: "column" }} className={classes.banner}>
+  return (
+    <div className={classes.root}>
+      <NavBar current="/toolkit" />
+      {/* <div style={{ display: "flex", flexDirection: "column" }} className={classes.banner}>
                 <h1 className={classes.header}>
                     The Tools
                 </h1>
@@ -145,35 +146,56 @@ export default function Toolkit() {
                 </h2>
             </div>
             <img src={toolkitBanner} alt="toolkit banner" className={[classes.banner + " " + classes.heroBanner]} ></img> */}
-            <Grid container className={classes.banner} style={{marginTop: "6vw"}}>
-                <Grid item sm={12} md={5}>
-                    <div style={{ display: "flex", flexDirection: "column", padding: "10vw 0 0 8vw", justifyContent: "center", width: "100%"}} >
-                        <h1 className={classes.header}>
-                            Bộ toolkit
-                        </h1>
-                        <h2 className={classes.subTitle}>
-                            Một sự khởi đầu “Cùng con”
-                        </h2>
-                    </div>
-                </Grid>
-                <Grid item sm={12} md={7}>
-                <img src={toolkitBanner} alt="toolkit banner" className={[classes.banner]} style={{margin: "2vw", width: "90%"}}></img>
-                </Grid>
-            </Grid>
-            <Grid container className={classes.section} style={{ paddingBottom: 0 }}>
-                <Grid item sm={12} md={5}>
-                    <h1 className={classes.sectionHeader}>Bộ toolkit sẽ đóng vai trò như người bạn đồng hành của bạn</h1>
-                </Grid>
-                <Grid item sm={12} md={6} className={[classes.sectionDescription, classes.gridResponsive]}>
-                    <div>
-                        Bộ Kit “Cùng con” là sản phẩm cung cấp các kiến thức và hoạt động dành cho các bậc phụ huynh có con ở độ tuổi từ 4-7.
-                        ‍<br /> <br />
-                        Bộ Kit “Cùng con” giúp cha mẹ có thể thấu hiểu được những vấn đề về tâm sinh lý của con, tăng cường tương tác và kết nối trong gia đình
-                    </div>
-                </Grid>
-                {/* <img src={dividerBanner} alt="toolkit divider banner" className={[classes.banner + " " + classes.bannerResponsive]} style={{marginBottom: "-6vw"}}></img> */}
-            </Grid>
-            {/* <Grid container className={classes.section} style={{ background: "#F8EAEA"}}>
+      <Grid
+        container
+        className={classes.banner}
+        style={{ marginTop: "6vw", alignItems: "center" }}
+      >
+        <Grid item sm={12} md={5}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              paddingLeft: "8vw",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <h1 className={classes.header}>Bộ toolkit</h1>
+            <h2 className={classes.subTitle}>Một sự khởi đầu “Cùng con”</h2>
+          </div>
+        </Grid>
+        <Grid item sm={12} md={7}>
+          <img
+            src={toolkitBanner}
+            alt="toolkit banner"
+            className={[classes.banner]}
+            style={{ margin: "2vw", width: "90%" }}
+          ></img>
+        </Grid>
+      </Grid>
+      <Grid container className={classes.section} style={{ paddingBottom: 0 }}>
+        <Grid item sm={12} md={5}>
+          <h1 className={classes.sectionHeader}>
+            Bộ toolkit sẽ đóng vai trò như người bạn đồng hành của bạn
+          </h1>
+        </Grid>
+        <Grid
+          item
+          sm={12}
+          md={6}
+          className={[classes.sectionDescription, classes.gridResponsive]}
+        >
+          <div>
+            Bộ Kit “Cùng con” là sản phẩm cung cấp các kiến thức và hoạt động
+            dành cho các bậc phụ huynh có con ở độ tuổi từ 4-7. ‍<br /> <br />
+            Bộ Kit “Cùng con” giúp cha mẹ có thể thấu hiểu được những vấn đề về
+            tâm sinh lý của con, tăng cường tương tác và kết nối trong gia đình
+          </div>
+        </Grid>
+        {/* <img src={dividerBanner} alt="toolkit divider banner" className={[classes.banner + " " + classes.bannerResponsive]} style={{marginBottom: "-6vw"}}></img> */}
+      </Grid>
+      {/* <Grid container className={classes.section} style={{ background: "#F8EAEA"}}>
                 <div className={classes.banner}>
                     <h1 className={classes.sectionHeader} style={{ textAlign: "center", marginTop: "4vw" }}>
                         Where should you start?
@@ -216,26 +238,29 @@ export default function Toolkit() {
                     </Grid>
                 </Grid>
             </Grid> */}
-            <Grid container className={[classes.section, classes.tools]}>
-                <div className={classes.banner}>
-                    <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
-                        Sản phẩm trực tiếp
-                    </h1>
-                </div>
-                {toolkitData.map((tool) => (
-                    <Grid item xs={12} sm={6} md={4} className={classes.tool}>
-                        <Link to={`/tool-detail/${tool._id}`} style={{ textDecoration: "none", textAlign: "-webkit-center" }}>
-                            <Tool
-                                img={tool.img}
-                                title={tool.title}
-                                description={tool.description}
-                            />
-                        </Link>
-                    </Grid>
-                ))}
-            </Grid>
-            <Footer />
-            <ScrollButton />
+      <Grid container className={[classes.section, classes.tools]}>
+        <div className={classes.banner}>
+          <h1 className={classes.sectionHeader} style={{ textAlign: "center" }}>
+            Sản phẩm trực tiếp
+          </h1>
         </div>
-    );
+        {toolkitData.map((tool) => (
+          <Grid item xs={12} sm={6} md={4} className={classes.tool}>
+            <Link
+              to={`/tool-detail/${tool._id}`}
+              style={{ textDecoration: "none", textAlign: "-webkit-center" }}
+            >
+              <Tool
+                img={tool.img}
+                title={tool.title}
+                description={tool.description}
+              />
+            </Link>
+          </Grid>
+        ))}
+      </Grid>
+      <Footer />
+      <ScrollButton />
+    </div>
+  );
 }
